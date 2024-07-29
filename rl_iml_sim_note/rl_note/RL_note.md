@@ -72,7 +72,7 @@
   - OpenVLA
   - Mobile Aloha
 
-![img](./RL_note_cheatsheet.assets/Camera_XHS_17213772945721040g2sg3150cnj0j0o005p52tn0qmnoqegkg02o.jpg)
+![img](./RL_note.assets/Camera_XHS_17213772945721040g2sg3150cnj0j0o005p52tn0qmnoqegkg02o.jpg)
 
 
 
@@ -266,7 +266,7 @@
 
 因为神经网络中每一层的输入输出都是一个线性求和的过程，下一层的输出只是承接了上一层输入函数的线性变换，所以如果没有激活函数，那么无论你构造的神经网络多么复杂，有多少层，最后的输出都是输入的线性组合，纯粹的线性组合并不能够解决更为复杂的问题。而引入激活函数之后，我们会发现常见的激活函数都是非线性的，因此也会给神经元引入非线性元素，使得神经网络可以逼近其他的任何非线性函数，这样可以使得神经网络应用到更多非线性模型中。
 
-![img](./RL_note_cheatsheet.assets/v2-91e1b17ef9b61256739749feff3cea10_b.jpg)
+![img](./RL_note.assets/v2-91e1b17ef9b61256739749feff3cea10_b.jpg)
 
 为了增强网络的表示能力和学习能力，神经网络的激活函数都是非线性的，通常具有以下几点性质：
 
@@ -286,7 +286,7 @@
   - 取值范围为(0,1), 将一个实数映射到(0,1)的区间，可以用来做二分类。
   - 特征相差比较复杂或是相差不是特别大时效果比较好
 
-  ![img](./RL_note_cheatsheet.assets/v2-707f1aa66391f2a838fd3b81c93d45d5_b.jpg)
+  ![img](./RL_note.assets/v2-707f1aa66391f2a838fd3b81c93d45d5_b.jpg)
 
   - 缺点
     - 梯度消失：注意：Sigmoid 函数趋近 0 和 1 的时候变化率会变得平坦，也就是说，Sigmoid 的梯度趋近于 0。神经网络使用 Sigmoid 激活函数进行反向传播时，输出接近 0 或 1 的神经元其梯度趋近于 0。这些神经元叫作饱和神经元。因此，这些神经元的权重不会更新。此外，与此类神经元相连的神经元的权重也更新得很慢。该问题叫作梯度消失。因此，想象一下，如果一个大型神经网络包含 Sigmoid 神经元，而其中很多个都处于饱和状态，那么该网络无法执行反向传播。
@@ -302,7 +302,7 @@
     $$
     tanh(x) = 2\text{sigmoid}(2x) - 1
     $$
-    ![img](./RL_note_cheatsheet.assets/v2-2e4c92ede47e719d0ce54653b2f443d8_b.jpg)
+    ![img](./RL_note.assets/v2-2e4c92ede47e719d0ce54653b2f443d8_b.jpg)
 
   - 在实践中，Tanh 函数的使用优先性高于 Sigmoid 函数。
 
@@ -334,7 +334,7 @@
     \\
     &=\max(0,x)
     $$
-    ![img](./RL_note_cheatsheet.assets/v2-8505da32b28e52b61772f04fbcc3c9a2_b.jpg)
+    ![img](./RL_note.assets/v2-8505da32b28e52b61772f04fbcc3c9a2_b.jpg)
 
   - 优点：
 
@@ -369,7 +369,7 @@
     
     \gamma &= 0.01, 0.1 ... \text{是一个很小的值}
     $$
-    ![img](./RL_note_cheatsheet.assets/v2-a942719eba0ee2d65db0a8a030d280ba_b.jpg)
+    ![img](./RL_note.assets/v2-a942719eba0ee2d65db0a8a030d280ba_b.jpg)
 
   - Leaky ReLU 通过把 x 的非常小的线性分量给予负输入（0.01x）来调整负值的零梯度（zero gradients）问题，当 x < 0 时，它得到 0.1 的正梯度。该函数一定程度上缓解了 dead ReLU 问题，
 
@@ -385,7 +385,7 @@
     $$
     S_i = \frac{e^i}{\sum_j e^j}
     $$
-    <img src="./RL_note_cheatsheet.assets/v2-9a9bd95906eeead662750df9c2acf6c6_b.jpg" alt="img" style="zoom:50%;" />
+    <img src="./RL_note.assets/v2-9a9bd95906eeead662750df9c2acf6c6_b.jpg" alt="img" style="zoom:50%;" />
 
   - Softmax 与正常的 max 函数不同：max 函数仅输出最大值，但 Softmax 确保较小的值具有较小的概率，并且不会直接丢弃。我们可以认为它是 argmax 函数的概率版本或「soft」版本。
 
@@ -426,7 +426,7 @@
     - 它表示一个随机变量的平均信息含量或者平均不确定度。
     - 熵越大,意味着随机变量的不确定性越大。
     - 熵的公式为: $H(X) = -\sum_{i=1}^{n} p(x_i) \log p(x_i)$,其中 $p(x_i)$ 是随机变量 $X$ 取值 $x_i$ 的概率。
-  - ![image-20240719164338895](./RL_note_cheatsheet.assets/image-20240719164338895.png)
+  - ![image-20240719164338895](./RL_note.assets/image-20240719164338895.png)
 
 - **交叉熵(Cross Entropy)**:
 
@@ -459,7 +459,7 @@
 - 参考
   - https://blog.csdn.net/simplification/article/details/95238464
 
-![image-20240719130254210](./RL_note_cheatsheet.assets/image-20240719130254210.png)
+![image-20240719130254210](./RL_note.assets/image-20240719130254210.png)
 
 - 目标y是连续值
 
@@ -554,7 +554,7 @@
 - 参考
   - https://zhuanlan.zhihu.com/p/139122386
 
-![image-20240719153134989](./RL_note_cheatsheet.assets/image-20240719153134989.png)
+![image-20240719153134989](./RL_note.assets/image-20240719153134989.png)
 
 - 激活函数 sigmoid
 
@@ -579,7 +579,7 @@
 
   - 把每个标签映射到 k=10 维的向量上
 
-  ![image-20240719170721390](./RL_note_cheatsheet.assets/image-20240719170721390.png)
+  ![image-20240719170721390](./RL_note.assets/image-20240719170721390.png)
 
 - softmax 激活函数
 
@@ -596,27 +596,27 @@
   S_i = \frac{e^i}{\sum_j e^j}
   $$
 
-  <img src="./RL_note_cheatsheet.assets/v2-9a9bd95906eeead662750df9c2acf6c6_b.jpg" alt="img" style="zoom:50%;" />
+  <img src="./RL_note.assets/v2-9a9bd95906eeead662750df9c2acf6c6_b.jpg" alt="img" style="zoom:50%;" />
 
 
 
 - 线性 softmax 分类器结构
 
-  ![image-20240719171247400](./RL_note_cheatsheet.assets/image-20240719171247400.png)
+  ![image-20240719171247400](./RL_note.assets/image-20240719171247400.png)
 
 - 把训练描述成优化问题
 
   - 正向部分
 
-  ![image-20240719171331580](./RL_note_cheatsheet.assets/image-20240719171331580.png)
+  ![image-20240719171331580](./RL_note.assets/image-20240719171331580.png)
 
   - 损失函数 平均交叉熵 负对数似然函数
 
-    ![image-20240719171433664](./RL_note_cheatsheet.assets/image-20240719171433664.png)
+    ![image-20240719171433664](./RL_note.assets/image-20240719171433664.png)
 
   - 定义以下优化问题, 并加入正则项
 
-    ![image-20240719171514214](./RL_note_cheatsheet.assets/image-20240719171514214.png)
+    ![image-20240719171514214](./RL_note.assets/image-20240719171514214.png)
 
   - 梯度下降等优化方法
 
@@ -626,7 +626,7 @@
 
 #### 多层感知器 MLP
 
-![image-20240719172139694](./RL_note_cheatsheet.assets/image-20240719172139694.png)
+![image-20240719172139694](./RL_note.assets/image-20240719172139694.png)
 
 - 输入层
 - 隐藏层
@@ -647,9 +647,9 @@
 
 #### 卷积神经网络
 
-![image-20240719172159126](./RL_note_cheatsheet.assets/image-20240719172159126.png)
+![image-20240719172159126](./RL_note.assets/image-20240719172159126.png)
 
-![image-20240719172238667](./RL_note_cheatsheet.assets/image-20240719172238667.png)
+![image-20240719172238667](./RL_note.assets/image-20240719172238667.png)
 
 
 
@@ -667,20 +667,20 @@
 
 - 梯度
 
-![image-20240719172358675](./RL_note_cheatsheet.assets/image-20240719172358675.png)
+![image-20240719172358675](./RL_note.assets/image-20240719172358675.png)
 
 
 
 - 梯度下降 GD
   - 学习率 $\alpha$
-  - ![image-20240719172538102](./RL_note_cheatsheet.assets/image-20240719172538102.png)
+  - ![image-20240719172538102](./RL_note.assets/image-20240719172538102.png)
 - 随机梯度下降 SGD
   - 实际训练神经网络的时候，总是用 SGD（及其变体）
   - 从当前批次的随机第j个样本中进行梯度下降
   - SGD 和小批量（mini-batch） SGD 可以跳出鞍点，趋近局部最优。
   - 在实际应用中，**随机梯度下降 SGD 法必须和动态学习率**方法结合起来使用，否则使用固定学习率 + SGD的组合会使得模型收敛过程变得更复杂。
   - 从中抽取部分数据，就是Mini-batch gradient descent算法
-  - ![image-20240719172625924](./RL_note_cheatsheet.assets/image-20240719172625924.png)
+  - ![image-20240719172625924](./RL_note.assets/image-20240719172625924.png)
 
 - Adam
 - AdaDelta
@@ -746,23 +746,23 @@ batch normalization 的缺点包括:
 
   - 离散随机变量的概率分布函数
 
-    ![image-20240719232252182](./RL_note_cheatsheet.assets/image-20240719232252182.png)
+    ![image-20240719232252182](./RL_note.assets/image-20240719232252182.png)
 
-    ![image-20240719232608512](./RL_note_cheatsheet.assets/image-20240719232608512.png)
+    ![image-20240719232608512](./RL_note.assets/image-20240719232608512.png)
 
   - 离散随机变量X的概率之和为1
 
-    ![image-20240721222709394](./RL_note_cheatsheet.assets/image-20240721222709394.png)
+    ![image-20240721222709394](./RL_note.assets/image-20240721222709394.png)
 
 - 概率密度函数 PDF
 
   - 连续随机变量的概率分布函数
 
-    ![image-20240719232336708](./RL_note_cheatsheet.assets/image-20240719232336708.png)
+    ![image-20240719232336708](./RL_note.assets/image-20240719232336708.png)
 
-    ![image-20240719232436140](./RL_note_cheatsheet.assets/image-20240719232436140.png)
+    ![image-20240719232436140](./RL_note.assets/image-20240719232436140.png)
 
-    ![image-20240719232624072](./RL_note_cheatsheet.assets/image-20240719232624072.png)
+    ![image-20240719232624072](./RL_note.assets/image-20240719232624072.png)
 
   - 连续随机变量X的定义域上的积分为1
 
@@ -776,25 +776,25 @@ batch normalization 的缺点包括:
 
 - 离散随机变量的期望
 
-  ![image-20240721222637996](./RL_note_cheatsheet.assets/image-20240721222637996.png)
+  ![image-20240721222637996](./RL_note.assets/image-20240721222637996.png)
 
 - 连续随机变量的期望
 
-  ![image-20240721222651279](./RL_note_cheatsheet.assets/image-20240721222651279.png)
+  ![image-20240721222651279](./RL_note.assets/image-20240721222651279.png)
 
 ### 蒙特卡洛
 
 - 通过随机样本估算真实值
 
-  ![image-20240719233337193](./RL_note_cheatsheet.assets/image-20240719233337193.png)
+  ![image-20240719233337193](./RL_note.assets/image-20240719233337193.png)
 
   - 一个点落在圆里的概率
 
-    ![image-20240719233406497](./RL_note_cheatsheet.assets/image-20240719233406497.png)
+    ![image-20240719233406497](./RL_note.assets/image-20240719233406497.png)
 
   - 随机抽样了 n 个点，设圆内的点的数量为随机变量 M。显然，M 的期望等于
 
-    ![image-20240719233452682](./RL_note_cheatsheet.assets/image-20240719233452682.png)
+    ![image-20240719233452682](./RL_note.assets/image-20240719233452682.png)
 
     - 判断点是否在圆内 $x^2 + y^2 <= 1$
 
@@ -804,11 +804,11 @@ batch normalization 的缺点包括:
 
 - 近似期望
 
-  ![image-20240719235038298](./RL_note_cheatsheet.assets/image-20240719235038298.png)
+  ![image-20240719235038298](./RL_note.assets/image-20240719235038298.png)
 
 - 随机梯度
 
-  ![image-20240719235413266](./RL_note_cheatsheet.assets/image-20240719235413266.png)
+  ![image-20240719235413266](./RL_note.assets/image-20240719235413266.png)
 
 
 
@@ -882,7 +882,7 @@ batch normalization 的缺点包括:
 
 
 
-![image-20240719103750690](./RL_note_cheatsheet.assets/image-20240719103750690.png)
+![image-20240719103750690](./RL_note.assets/image-20240719103750690.png)
 
 
 
@@ -892,11 +892,11 @@ batch normalization 的缺点包括:
 
 - **动作的随机性**来自于随机决策。给定当前状态 s，策略函数 $π(a|s)$ 会算出动作 空间 A 中每个动作 a 的概率值。智能体执行的动作是随机抽样的结果，所以带有随机性
 
-  ![image-20240720001227670](./RL_note_cheatsheet.assets/image-20240720001227670.png)
+  ![image-20240720001227670](./RL_note.assets/image-20240720001227670.png)
 
 - **状态的随机性**来自于状态转移函数。 当状态 s 和动作 a 都被确定下来，下一个 状态仍然有随机性。
 
-  ![image-20240720001243926](./RL_note_cheatsheet.assets/image-20240720001243926.png)
+  ![image-20240720001243926](./RL_note.assets/image-20240720001243926.png)
 
 - **奖励的随机性**
 
@@ -906,7 +906,7 @@ batch normalization 的缺点包括:
 
   - 如果 At 还 没被观测到，或者 (St , At) 都没被观测到， 那么 t 时刻的奖励就有不确定性。
 
-    ![image-20240720001557518](./RL_note_cheatsheet.assets/image-20240720001557518.png)
+    ![image-20240720001557518](./RL_note.assets/image-20240720001557518.png)
 
 - **马尔科夫性质**
 
@@ -918,7 +918,7 @@ batch normalization 的缺点包括:
 
     s1, a1, r1, s2, a2, r2, s3, a3, r3, · · ·
 
-    ![image-20240720001921258](./RL_note_cheatsheet.assets/image-20240720001921258.png)
+    ![image-20240720001921258](./RL_note.assets/image-20240720001921258.png)
 
 
 
@@ -926,15 +926,15 @@ batch normalization 的缺点包括:
 
 - **回报 return**
 
-  - ![image-20240720002206944](./RL_note_cheatsheet.assets/image-20240720002206944.png)
+  - ![image-20240720002206944](./RL_note.assets/image-20240720002206944.png)
 
 - **折扣回报 discounted return**
 
-  ![image-20240720002250545](./RL_note_cheatsheet.assets/image-20240720002250545.png)![image-20240720002344556](./RL_note_cheatsheet.assets/image-20240720002344556.png)
+  ![image-20240720002250545](./RL_note.assets/image-20240720002250545.png)![image-20240720002344556](./RL_note.assets/image-20240720002344556.png)
 
 - **回报的随机性**
 
-  ![image-20240720002521754](./RL_note_cheatsheet.assets/image-20240720002521754.png)
+  ![image-20240720002521754](./RL_note.assets/image-20240720002521754.png)
 
 - MDP 的时间步可以是有限期（finite-horizon）或无限期（infinite-horizon）
 
@@ -952,20 +952,20 @@ batch normalization 的缺点包括:
 
   - 对 $U_t$ 关于变量 $S_{t+1}, A_{t+1}, S_{t+2}, A_{t+2}, · · · , S_n, A_n$ 求条件期望，得到
 
-    ![image-20240720003755875](./RL_note_cheatsheet.assets/image-20240720003755875.png)
+    ![image-20240720003755875](./RL_note.assets/image-20240720003755875.png)
 
   - 条件期望的结果 $Q_π(s_t , a_t)$ 被称作动作价值函数（action-value function）。
 
-  - ![image-20240720003901218](./RL_note_cheatsheet.assets/image-20240720003901218.png)
+  - ![image-20240720003901218](./RL_note.assets/image-20240720003901218.png)
 
 - **最优动作价值函数**
 
   - 消除掉策略 $\pi$ 的影响
-  - ![image-20240720004032861](./RL_note_cheatsheet.assets/image-20240720004032861.png)
+  - ![image-20240720004032861](./RL_note.assets/image-20240720004032861.png)
 
 - **状态价值函数**
 
-  ![image-20240720004225401](./RL_note_cheatsheet.assets/image-20240720004225401.png)
+  ![image-20240720004225401](./RL_note.assets/image-20240720004225401.png)
 
 
 
@@ -991,7 +991,7 @@ batch normalization 的缺点包括:
     - 异策略的好处是可以用行为策略收集经验，把 (st , at , rt , st+1) 这样的四元组记录到 一个数组里(经验回放数组)，在事后反复利用这些经验去更新目标策略。
     - **经验回放**只 适用于异策略，不适用于同策略，其原因是收集经验时用的行为策略不同于想要训练出 的目标策略。
 
-![image-20240721111224969](./RL_note_cheatsheet.assets/image-20240721111224969.png)
+![image-20240721111224969](./RL_note.assets/image-20240721111224969.png)
 
 
 
@@ -1007,31 +1007,31 @@ batch normalization 的缺点包括:
 
 - 奖励: 一局游戏中从开始到结束
 
-  ![image-20240721224356191](./RL_note_cheatsheet.assets/image-20240721224356191.png)
+  ![image-20240721224356191](./RL_note.assets/image-20240721224356191.png)
 
 - 折扣奖励
 
-  ![image-20240721224415195](./RL_note_cheatsheet.assets/image-20240721224415195.png)
+  ![image-20240721224415195](./RL_note.assets/image-20240721224415195.png)
 
-  ![image-20240721225303858](./RL_note_cheatsheet.assets/image-20240721225303858.png)
+  ![image-20240721225303858](./RL_note.assets/image-20240721225303858.png)
 
 - 动作价值函数
 
-  ![image-20240721224456923](./RL_note_cheatsheet.assets/image-20240721224456923.png)
+  ![image-20240721224456923](./RL_note.assets/image-20240721224456923.png)
 
 - 最优动作价值函数, 最大化消除掉策略$\pi$, 不管采取什么策略, 都不可能超越 $Q_*$ 
 
-  ![image-20240721224522915](./RL_note_cheatsheet.assets/image-20240721224522915.png)
+  ![image-20240721224522915](./RL_note.assets/image-20240721224522915.png)
 
-  ![image-20240721225355293](./RL_note_cheatsheet.assets/image-20240721225355293.png)
+  ![image-20240721225355293](./RL_note.assets/image-20240721225355293.png)
 
 - DQN 代替 $Q_*$
 
-  ![image-20240720105528979](./RL_note_cheatsheet.assets/image-20240720105528979.png)
+  ![image-20240720105528979](./RL_note.assets/image-20240720105528979.png)
 
 - DQN 的梯度
 
-  ![image-20240721224657065](./RL_note_cheatsheet.assets/image-20240721224657065.png)
+  ![image-20240721224657065](./RL_note.assets/image-20240721224657065.png)
 
 #### 时间差分算法 TD 更新DQN
 
@@ -1039,57 +1039,57 @@ batch normalization 的缺点包括:
 
 - 最初估计值
 
-  ![image-20240721224855762](./RL_note_cheatsheet.assets/image-20240721224855762.png)
+  ![image-20240721224855762](./RL_note.assets/image-20240721224855762.png)
 
 - 执行部分动作后+剩余估计值
 
-  ![image-20240721224936618](./RL_note_cheatsheet.assets/image-20240721224936618.png)
+  ![image-20240721224936618](./RL_note.assets/image-20240721224936618.png)
 
 - 损失函数
 
-  ![image-20240721225005944](./RL_note_cheatsheet.assets/image-20240721225005944.png)
+  ![image-20240721225005944](./RL_note.assets/image-20240721225005944.png)
 
 - TD 误差
 
   - TD误差相当于已经执行的动作结果与初始时对这部分动作的预测的差值
 
-  ![image-20240721225114420](./RL_note_cheatsheet.assets/image-20240721225114420.png)
+  ![image-20240721225114420](./RL_note.assets/image-20240721225114420.png)
 
 - 损失函数的梯度
 
-  ![image-20240721225140503](./RL_note_cheatsheet.assets/image-20240721225140503.png)
+  ![image-20240721225140503](./RL_note.assets/image-20240721225140503.png)
 
 - 最优贝尔曼方程
 
-  ![image-20240721225444533](./RL_note_cheatsheet.assets/image-20240721225444533.png)
+  ![image-20240721225444533](./RL_note.assets/image-20240721225444533.png)
 
 - 对最优贝尔曼方程进行蒙特卡洛近似
 
   - 有四元组
 
-    ![image-20240721225543172](./RL_note_cheatsheet.assets/image-20240721225543172.png)
+    ![image-20240721225543172](./RL_note.assets/image-20240721225543172.png)
 
   - 蒙特卡尔近似最优贝尔曼, 类似TD, 左边是原始预测, 右边是加入了部分事实的预测
 
-    ![image-20240721225618027](./RL_note_cheatsheet.assets/image-20240721225618027.png)
+    ![image-20240721225618027](./RL_note.assets/image-20240721225618027.png)
 
 - 用 DQN 替换 $Q_*$
 
-  ![image-20240721225724170](./RL_note_cheatsheet.assets/image-20240721225724170.png)
+  ![image-20240721225724170](./RL_note.assets/image-20240721225724170.png)
 
 - TD目标 $\hat{y}_t$ 比预测 $\hat{q}_t$ 更可信, 需要让预测 $\hat{q}_t$ 更加靠近TD目标 $\hat{y}_t$
 
 - 损失函数
 
-  ![image-20240721225933730](./RL_note_cheatsheet.assets/image-20240721225933730.png)
+  ![image-20240721225933730](./RL_note.assets/image-20240721225933730.png)
 
 - 损失函数关于参数 $\boldsymbol{w}$ 的梯度
 
-  ![image-20240721230031223](./RL_note_cheatsheet.assets/image-20240721230031223.png)
+  ![image-20240721230031223](./RL_note.assets/image-20240721230031223.png)
 
 - 更新 $\boldsymbol{w}$ , 使预测 $\hat{q}_t$ 更加靠近TD目标 $\hat{y}_t$
 
-  ![image-20240721230126926](./RL_note_cheatsheet.assets/image-20240721230126926.png)
+  ![image-20240721230126926](./RL_note.assets/image-20240721230126926.png)
 
 #### 训练流程
 
@@ -1101,17 +1101,17 @@ batch normalization 的缺点包括:
 
   - 常用的是 $\epsilon$-greedy 策略
 
-    ![image-20240721230554808](./RL_note_cheatsheet.assets/image-20240721230554808.png)
+    ![image-20240721230554808](./RL_note.assets/image-20240721230554808.png)
 
   - 经验回放数组
 
-    ![image-20240721230625432](./RL_note_cheatsheet.assets/image-20240721230625432.png)
+    ![image-20240721230625432](./RL_note.assets/image-20240721230625432.png)
 
-    ![image-20240721230649480](./RL_note_cheatsheet.assets/image-20240721230649480.png)
+    ![image-20240721230649480](./RL_note.assets/image-20240721230649480.png)
 
 - 更新DQN参数
 
-  ![image-20240721230744715](./RL_note_cheatsheet.assets/image-20240721230744715.png)
+  ![image-20240721230744715](./RL_note.assets/image-20240721230744715.png)
 
 
 
@@ -1127,17 +1127,17 @@ batch normalization 的缺点包括:
   - Q-learning 目的是学习最优动作价值函数 $Q_*$ 已经将策略 $\pi$ 排除在外
   - SARSA 算法, 目的是学习动作价值函数 $Q_\pi$ , 包括了策略
     - 因为将策略带入了学习过程, 所以不能使用经验回放数组
-  - ![image-20240721114106165](./RL_note_cheatsheet.assets/image-20240721114106165.png)
+  - ![image-20240721114106165](./RL_note.assets/image-20240721114106165.png)
 
 #### SARSA 表格形式, 目的是更新表格 $q$
 
 - 表格 $q$
 
-  ![image-20240721235229746](./RL_note_cheatsheet.assets/image-20240721235229746.png)
+  ![image-20240721235229746](./RL_note.assets/image-20240721235229746.png)
 
 - 贝尔曼方程
 
-  ![image-20240721233011908](./RL_note_cheatsheet.assets/image-20240721233011908.png)
+  ![image-20240721233011908](./RL_note.assets/image-20240721233011908.png)
 
 - 贝尔曼方程左侧通过表格 $q$ 近似得到预测目标 $q(s_t, a_t)$
 
@@ -1145,17 +1145,17 @@ batch normalization 的缺点包括:
 
   - 这里的 $\tilde{a}_{t+1}$ 是根据策略 $\pi(\cdot|s_{t+1})$ 抽样得到的
 
-  ![image-20240721233314459](./RL_note_cheatsheet.assets/image-20240721233314459.png)
+  ![image-20240721233314459](./RL_note.assets/image-20240721233314459.png)
 
 - 更新表格 $(s_t, a_t)$ 位置的元素
 
-  ![image-20240721233511066](./RL_note_cheatsheet.assets/image-20240721233511066.png)
+  ![image-20240721233511066](./RL_note.assets/image-20240721233511066.png)
 
 - SARSA 学习到的表格 $q$ 依赖于策略 $\pi$ , 因为五元组 $(s_t, a_t, r_t, s_{t+1}, \tilde{a}_{t+1})$ 中的 $\tilde{a}_{t+1}$ 是根据策略 $\pi(\cdot|s_{t+1})$ 抽样得到的
 
 - 训练流程 
 
-  ![image-20240721113541436](./RL_note_cheatsheet.assets/image-20240721113541436.png)
+  ![image-20240721113541436](./RL_note.assets/image-20240721113541436.png)
 
 
 
@@ -1163,19 +1163,19 @@ batch normalization 的缺点包括:
 
 - 价值网络 value network $q(s, a; \boldsymbol{w})$ 近似 $q_\pi(s, a)$ 
 
-  ![image-20240722000830517](./RL_note_cheatsheet.assets/image-20240722000830517.png)
+  ![image-20240722000830517](./RL_note.assets/image-20240722000830517.png)
 
-  ![image-20240722000908384](./RL_note_cheatsheet.assets/image-20240722000908384.png)
+  ![image-20240722000908384](./RL_note.assets/image-20240722000908384.png)
 
 - 推导
 
-  ![image-20240721124956527](./RL_note_cheatsheet.assets/image-20240721124956527.png)
+  ![image-20240721124956527](./RL_note.assets/image-20240721124956527.png)
 
-  ![image-20240721125046159](./RL_note_cheatsheet.assets/image-20240721125046159.png)
+  ![image-20240721125046159](./RL_note.assets/image-20240721125046159.png)
 
 - 训练流程
 
-  ![image-20240721125117963](./RL_note_cheatsheet.assets/image-20240721125117963.png)
+  ![image-20240721125117963](./RL_note.assets/image-20240721125117963.png)
 
 
 
@@ -1185,37 +1185,37 @@ batch normalization 的缺点包括:
 
 - 单步TD: 只用到一个奖励 $r_t$
 
-  ![image-20240722001302961](./RL_note_cheatsheet.assets/image-20240722001302961.png)
+  ![image-20240722001302961](./RL_note.assets/image-20240722001302961.png)
 
 - 多步TD
 
   - 回报
 
-    ![image-20240722001358259](./RL_note_cheatsheet.assets/image-20240722001358259.png)
+    ![image-20240722001358259](./RL_note.assets/image-20240722001358259.png)
 
   - 初始预测 
 
-    ![image-20240722001642303](./RL_note_cheatsheet.assets/image-20240722001642303.png)
+    ![image-20240722001642303](./RL_note.assets/image-20240722001642303.png)
 
   - 多步TD目标: 基于贝尔曼方程的蒙特卡洛近似
 
-    ![image-20240722001525367](./RL_note_cheatsheet.assets/image-20240722001525367.png)
+    ![image-20240722001525367](./RL_note.assets/image-20240722001525367.png)
 
   - 损失函数
 
-    ![image-20240722001608767](./RL_note_cheatsheet.assets/image-20240722001608767.png)
+    ![image-20240722001608767](./RL_note.assets/image-20240722001608767.png)
 
   - 更新价值网络参数
 
-    ![image-20240722001726081](./RL_note_cheatsheet.assets/image-20240722001726081.png)
+    ![image-20240722001726081](./RL_note.assets/image-20240722001726081.png)
 
 #### 多步TD训练流程
 
-![image-20240721130533387](./RL_note_cheatsheet.assets/image-20240721130533387.png)
+![image-20240721130533387](./RL_note.assets/image-20240721130533387.png)
 
 #### 单步TD(自举)  -> 多步TD(自举+蒙特卡洛) -> 回报(蒙特卡洛)
 
-![image-20240721130854169](./RL_note_cheatsheet.assets/image-20240721130854169.png)
+![image-20240721130854169](./RL_note.assets/image-20240721130854169.png)
 
 - 蒙特卡洛法
   - 需要观测所有奖励, 计算回报
@@ -1234,7 +1234,7 @@ batch normalization 的缺点包括:
   - 也有自举成分, 有价值网络自己估计的成分
   - 优于单步TD目标, 也优于回报 $u_t$ 
 
-![image-20240722002351866](./RL_note_cheatsheet.assets/image-20240722002351866.png)
+![image-20240722002351866](./RL_note.assets/image-20240722002351866.png)
 
 
 
@@ -1252,7 +1252,7 @@ batch normalization 的缺点包括:
 
     - 重复利用了经验, 更少的样本数量达到同样的表现
 
-      ![image-20240721133403638](./RL_note_cheatsheet.assets/image-20240721133403638.png)
+      ![image-20240721133403638](./RL_note.assets/image-20240721133403638.png)
 
   - 经验回放的局限性
 
@@ -1269,13 +1269,13 @@ batch normalization 的缺点包括:
 
     - 两种方法根据 $\delta_j$ 设置权重
 
-      ![image-20240722004437887](./RL_note_cheatsheet.assets/image-20240722004437887.png)
+      ![image-20240722004437887](./RL_note.assets/image-20240722004437887.png)
 
-      ![image-20240722004407718](./RL_note_cheatsheet.assets/image-20240722004407718.png)
+      ![image-20240722004407718](./RL_note.assets/image-20240722004407718.png)
 
   - 需要通过调整学习率来适应不同的抽样概率
 
-    ![image-20240722004505761](./RL_note_cheatsheet.assets/image-20240722004505761.png)
+    ![image-20240722004505761](./RL_note.assets/image-20240722004505761.png)
 
 
 
@@ -1287,15 +1287,15 @@ batch normalization 的缺点包括:
 
   - 原因1: 自举导致偏差的传播；
 
-    ![image-20240722004731756](./RL_note_cheatsheet.assets/image-20240722004731756.png)
+    ![image-20240722004731756](./RL_note.assets/image-20240722004731756.png)
 
-    ![image-20240722004754191](./RL_note_cheatsheet.assets/image-20240722004754191.png)
+    ![image-20240722004754191](./RL_note.assets/image-20240722004754191.png)
 
   - 原因2: 最大化导致 TD 目标高估真实价值。
 
-    ![image-20240722005009566](./RL_note_cheatsheet.assets/image-20240722005009566.png)
+    ![image-20240722005009566](./RL_note.assets/image-20240722005009566.png)
 
-    ![image-20240722005038729](./RL_note_cheatsheet.assets/image-20240722005038729.png)
+    ![image-20240722005038729](./RL_note.assets/image-20240722005038729.png)
 
 - 避免 DQN 高估 的方法
   - 方法1: 切断自举
@@ -1311,7 +1311,7 @@ batch normalization 的缺点包括:
 - 无法完全避免高估, 因为目标网络的参数仍然与DQN有关
 - 选择和求值都使用了目标网路
 
-![image-20240721151351263](./RL_note_cheatsheet.assets/image-20240721151351263.png)
+![image-20240721151351263](./RL_note.assets/image-20240721151351263.png)
 
 
 
@@ -1319,17 +1319,17 @@ batch normalization 的缺点包括:
 
 - 选择阶段使用DQN, 求值阶段使用目标网络
 
-  ![image-20240721151829748](./RL_note_cheatsheet.assets/image-20240721151829748.png)
+  ![image-20240721151829748](./RL_note.assets/image-20240721151829748.png)
 
 - 双Q学习算法流程
 
-  ![image-20240721152159663](./RL_note_cheatsheet.assets/image-20240721152159663.png)
+  ![image-20240721152159663](./RL_note.assets/image-20240721152159663.png)
 
-  ![image-20240721152212341](./RL_note_cheatsheet.assets/image-20240721152212341.png)
+  ![image-20240721152212341](./RL_note.assets/image-20240721152212341.png)
 
 ##### 原始Q学习 vs Q学习+目标网络 vs 双Q学习
 
-![image-20240721152351766](./RL_note_cheatsheet.assets/image-20240721152351766.png)
+![image-20240721152351766](./RL_note.assets/image-20240721152351766.png)
 
 
 
@@ -1348,41 +1348,41 @@ batch normalization 的缺点包括:
 
   - 动作价值函数
 
-    ![image-20240722020405999](./RL_note_cheatsheet.assets/image-20240722020405999.png)
+    ![image-20240722020405999](./RL_note.assets/image-20240722020405999.png)
 
   - 最优动作价值函数
 
-    ![image-20240722020425711](./RL_note_cheatsheet.assets/image-20240722020425711.png)
+    ![image-20240722020425711](./RL_note.assets/image-20240722020425711.png)
 
   - 状态价值函数
 
-    ![image-20240722020500520](./RL_note_cheatsheet.assets/image-20240722020500520.png)
+    ![image-20240722020500520](./RL_note.assets/image-20240722020500520.png)
 
   - 最优状态价值函数
 
-    ![image-20240722020529090](./RL_note_cheatsheet.assets/image-20240722020529090.png)
+    ![image-20240722020529090](./RL_note.assets/image-20240722020529090.png)
 
   - 最优优势函数
 
-    ![image-20240722020601882](./RL_note_cheatsheet.assets/image-20240722020601882.png)
+    ![image-20240722020601882](./RL_note.assets/image-20240722020601882.png)
 
   - $最优动作价值 Q_* =  最优状态价值 V_* + 最优优势函数 D_*$ 
 
-    ![image-20240722020620765](./RL_note_cheatsheet.assets/image-20240722020620765.png)
+    ![image-20240722020620765](./RL_note.assets/image-20240722020620765.png)
 
 - 对决网络
 
-  ![image-20240722020707571](./RL_note_cheatsheet.assets/image-20240722020707571.png)
+  ![image-20240722020707571](./RL_note.assets/image-20240722020707571.png)
 
-  - ![image-20240722020813962](./RL_note_cheatsheet.assets/image-20240722020813962.png)
+  - ![image-20240722020813962](./RL_note.assets/image-20240722020813962.png)
 
   - 对决网络的不唯一性 (使用第二种形式)
 
-    ![image-20240722020907898](./RL_note_cheatsheet.assets/image-20240722020907898.png)
+    ![image-20240722020907898](./RL_note.assets/image-20240722020907898.png)
 
   - 用mean 代替 max
 
-    ![image-20240721154254768](./RL_note_cheatsheet.assets/image-20240721154254768.png)
+    ![image-20240721154254768](./RL_note.assets/image-20240721154254768.png)
 
 
 
@@ -1396,17 +1396,17 @@ batch normalization 的缺点包括:
 
 - 对神经网络中的参数 $\boldsymbol{w}$ 替换成 $\boldsymbol{\mu} + \boldsymbol{\sigma}\circ\boldsymbol{\xi}$ 
 
-  ![image-20240722021134657](./RL_note_cheatsheet.assets/image-20240722021134657.png)
+  ![image-20240722021134657](./RL_note.assets/image-20240722021134657.png)
 
 - 噪声对DQN训练的影响
 
-  ![image-20240721170302637](./RL_note_cheatsheet.assets/image-20240721170302637.png)
+  ![image-20240721170302637](./RL_note.assets/image-20240721170302637.png)
 
 
 
 #### DQN 优先经验回放+双Q学习+对决网络+噪声DQN
 
-![image-20240721170454905](./RL_note_cheatsheet.assets/image-20240721170454905.png)
+![image-20240721170454905](./RL_note.assets/image-20240721170454905.png)
 
 
 
@@ -1420,15 +1420,15 @@ batch normalization 的缺点包括:
 
 - 离散动作空间
 
-  ![image-20240722093720149](./RL_note_cheatsheet.assets/image-20240722093720149.png)
+  ![image-20240722093720149](./RL_note.assets/image-20240722093720149.png)
 
 - 策略函数 $\pi$
 
   - 策略函数 π 的输入是状态 s 和动作 a，输出是一个 0 到 1 之间的概率值
 
-  ![image-20240722093748305](./RL_note_cheatsheet.assets/image-20240722093748305.png)
+  ![image-20240722093748305](./RL_note.assets/image-20240722093748305.png)
 
-  ![image-20240722093812512](./RL_note_cheatsheet.assets/image-20240722093812512.png)
+  ![image-20240722093812512](./RL_note.assets/image-20240722093812512.png)
 
   - 使用策略函数控制智能体
     - 每当观测到一个状态 s，就 用策略函数计算出每个动作的概率值，然后做随机抽样，得到一个动作 a，让智能体执 行 a。
@@ -1441,9 +1441,9 @@ batch normalization 的缺点包括:
 
   - 神经网络输出: 动作概率
 
-    ![image-20240722094042632](./RL_note_cheatsheet.assets/image-20240722094042632.png)
+    ![image-20240722094042632](./RL_note.assets/image-20240722094042632.png)
 
-  ![image-20240722094001798](./RL_note_cheatsheet.assets/image-20240722094001798.png)
+  ![image-20240722094001798](./RL_note.assets/image-20240722094001798.png)
 
 
 
@@ -1453,55 +1453,55 @@ batch normalization 的缺点包括:
 
 - 回报 $U_t$
 
-  ![image-20240722094147315](./RL_note_cheatsheet.assets/image-20240722094147315.png)
+  ![image-20240722094147315](./RL_note.assets/image-20240722094147315.png)
 
 - 动作价值函数
 
-  ![image-20240722094205784](./RL_note_cheatsheet.assets/image-20240722094205784.png)
+  ![image-20240722094205784](./RL_note.assets/image-20240722094205784.png)
 
 - 状态价值函数
 
   - 状态价值既依赖于当前状态 $s_t$，也依赖于策略网络 $\pi$ 的参数 $\theta$
 
-  ![image-20240722094229777](./RL_note_cheatsheet.assets/image-20240722094229777.png)
+  ![image-20240722094229777](./RL_note.assets/image-20240722094229777.png)
 
-  ![image-20240722094333192](./RL_note_cheatsheet.assets/image-20240722094333192.png)
+  ![image-20240722094333192](./RL_note.assets/image-20240722094333192.png)
 
 - **目标函数为状态价值函数关于状态的期望**
 
   - 排除了状态 $S$ 的因素, 只依赖于策略网络 π 的参数 θ
 
-  ![image-20240722094415339](./RL_note_cheatsheet.assets/image-20240722094415339.png)
+  ![image-20240722094415339](./RL_note.assets/image-20240722094415339.png)
 
 - **策略学习可以描述为 最大化 状态价值函数关于状态的期望**
 
-  ![image-20240722094526157](./RL_note_cheatsheet.assets/image-20240722094526157.png)
+  ![image-20240722094526157](./RL_note.assets/image-20240722094526157.png)
 
 - 对策略网络参数 $\boldsymbol{\theta}$ 的更新，使得目标函数 $J(\boldsymbol{\theta})$ 越来越大
 
-  ![image-20240722094621772](./RL_note_cheatsheet.assets/image-20240722094621772.png)
+  ![image-20240722094621772](./RL_note.assets/image-20240722094621772.png)
 
 - 策略梯度
 
-  ![image-20240722094701252](./RL_note_cheatsheet.assets/image-20240722094701252.png)
+  ![image-20240722094701252](./RL_note.assets/image-20240722094701252.png)
 
 - 策略学习的优化问题
 
-  ![image-20240722094856257](./RL_note_cheatsheet.assets/image-20240722094856257.png)
+  ![image-20240722094856257](./RL_note.assets/image-20240722094856257.png)
 
 - 策略梯度的定理
 
   - 无法解析求解, 并不知道状态 $S$ 概率密度函数
 
-  ![image-20240722094957831](./RL_note_cheatsheet.assets/image-20240722094957831.png)
+  ![image-20240722094957831](./RL_note.assets/image-20240722094957831.png)
 
 - 蒙特卡洛近似策略梯度, 得到**随机梯度** $\boldsymbol{g}(s, a;\boldsymbol{\theta})$
 
-  ![image-20240722095100368](./RL_note_cheatsheet.assets/image-20240722095100368.png)
+  ![image-20240722095100368](./RL_note.assets/image-20240722095100368.png)
 
 - 通过随机梯度  $\boldsymbol{g}(s, a;\boldsymbol{\theta})$ 上升, 增大目标函数 $J(\boldsymbol{\theta})$
 
-  ![image-20240722095319789](./RL_note_cheatsheet.assets/image-20240722095319789.png)
+  ![image-20240722095319789](./RL_note.assets/image-20240722095319789.png)
 
 - 动作价值函数 $Q_\pi(s, a)$ 未知, 无法求解 随机梯度  $\boldsymbol{g}(s, a;\boldsymbol{\theta})$
   - 方法1: REINFORCE, 用实际观测的回报 $u$ 近似 $Q_π(s, a)$；
@@ -1515,35 +1515,35 @@ batch normalization 的缺点包括:
 
 - t 时刻的折扣回报
 
-  ![image-20240722100607904](./RL_note_cheatsheet.assets/image-20240722100607904.png)
+  ![image-20240722100607904](./RL_note.assets/image-20240722100607904.png)
 
 - 动作价值函数
 
-  ![image-20240722100625531](./RL_note_cheatsheet.assets/image-20240722100625531.png)
+  ![image-20240722100625531](./RL_note.assets/image-20240722100625531.png)
 
 - 蒙特卡洛近似动作价值函数
 
-  ![image-20240722100714212](./RL_note_cheatsheet.assets/image-20240722100714212.png)
+  ![image-20240722100714212](./RL_note.assets/image-20240722100714212.png)
 
-  ![image-20240722100729871](./RL_note_cheatsheet.assets/image-20240722100729871.png)
+  ![image-20240722100729871](./RL_note.assets/image-20240722100729871.png)
 
 - 近似随机梯度 $\tilde{\boldsymbol{g}}(s_t, a_t;\boldsymbol{\theta})$
 
-  ![image-20240722100845125](./RL_note_cheatsheet.assets/image-20240722100845125.png)
+  ![image-20240722100845125](./RL_note.assets/image-20240722100845125.png)
 
-  ![image-20240722100905249](./RL_note_cheatsheet.assets/image-20240722100905249.png)
+  ![image-20240722100905249](./RL_note.assets/image-20240722100905249.png)
 
 - 随机梯度上升更新策略网络参数 $\boldsymbol{\theta}$
 
-  ![image-20240722100947577](./RL_note_cheatsheet.assets/image-20240722100947577.png)
+  ![image-20240722100947577](./RL_note.assets/image-20240722100947577.png)
 
 - 训练流程
 
-  <img src="./RL_note_cheatsheet.assets/image-20240722101047477.png" alt="image-20240722101047477"  />
+  <img src="./RL_note.assets/image-20240722101047477.png" alt="image-20240722101047477"  />
 
-  ![image-20240722101100611](./RL_note_cheatsheet.assets/image-20240722101100611.png)
+  ![image-20240722101100611](./RL_note.assets/image-20240722101100611.png)
 
-  - ![image-20240722101302057](./RL_note_cheatsheet.assets/image-20240722101302057.png)
+  - ![image-20240722101302057](./RL_note.assets/image-20240722101302057.png)
 
 
 
@@ -1559,22 +1559,22 @@ batch normalization 的缺点包括:
 
 - 随机梯度, 策略梯度的无偏估计
 
-  ![image-20240722102829694](./RL_note_cheatsheet.assets/image-20240722102829694.png)
+  ![image-20240722102829694](./RL_note.assets/image-20240722102829694.png)
 
 - Actor-Critic 通过神经网络(价值网络)近似 $Q_\pi$
 
-  ![image-20240722102927205](./RL_note_cheatsheet.assets/image-20240722102927205.png)
+  ![image-20240722102927205](./RL_note.assets/image-20240722102927205.png)
 
 - 价值网络 vs DQN
 
-  ![image-20240722103043171](./RL_note_cheatsheet.assets/image-20240722103043171.png)
+  ![image-20240722103043171](./RL_note.assets/image-20240722103043171.png)
 
 - Actor-Critic 策略网络(演员)与价值网络(评委)关系
 
   - **这里奖励 $R$ 需要通过价值网络到达策略网络, 是因为价值网络通过奖励 $R$ 估计出一个回报 $U$** 
   - 训练策略网络（演员）需要的是回报 $U$，而不 是奖励 $R$。
 
-  ![image-20240722103158662](./RL_note_cheatsheet.assets/image-20240722103158662.png)
+  ![image-20240722103158662](./RL_note.assets/image-20240722103158662.png)
 
 ##### 策略网络的更新
 
@@ -1582,15 +1582,15 @@ batch normalization 的缺点包括:
 
 - 策略网络梯度的无偏估计
 
-  ![image-20240722103406515](./RL_note_cheatsheet.assets/image-20240722103406515.png)
+  ![image-20240722103406515](./RL_note.assets/image-20240722103406515.png)
 
 - 通过价值网络 $q(s, a; \boldsymbol{w})$ 替换动作价值函数 $Q_\pi(s, a)$
 
-  ![image-20240722103525421](./RL_note_cheatsheet.assets/image-20240722103525421.png)
+  ![image-20240722103525421](./RL_note.assets/image-20240722103525421.png)
 
 - 梯度上升更新策略网络的参数
 
-  ![image-20240722103544672](./RL_note_cheatsheet.assets/image-20240722103544672.png)
+  ![image-20240722103544672](./RL_note.assets/image-20240722103544672.png)
 
 - 训练策略网络（演员）的方法不是真正让演员表现更好，只是让演员更迎合评委的喜好而已, 评委的水平 也很重要
   - 需要更新价值网络
@@ -1601,29 +1601,29 @@ batch normalization 的缺点包括:
 
 - t 时刻，价值网络输出估计
 
-  ![image-20240722103931100](./RL_note_cheatsheet.assets/image-20240722103931100.png)
+  ![image-20240722103931100](./RL_note.assets/image-20240722103931100.png)
 
 - TD目标
 
-  ![image-20240722103954767](./RL_note_cheatsheet.assets/image-20240722103954767.png)
+  ![image-20240722103954767](./RL_note.assets/image-20240722103954767.png)
 
 - 损失函数(TD误差)
 
-  ![image-20240722104037816](./RL_note_cheatsheet.assets/image-20240722104037816.png)
+  ![image-20240722104037816](./RL_note.assets/image-20240722104037816.png)
 
 - 损失函数的梯度
 
-  ![image-20240722104100712](./RL_note_cheatsheet.assets/image-20240722104100712.png)
+  ![image-20240722104100712](./RL_note.assets/image-20240722104100712.png)
 
 - 梯度下降
 
-  ![image-20240722104118445](./RL_note_cheatsheet.assets/image-20240722104118445.png)
+  ![image-20240722104118445](./RL_note.assets/image-20240722104118445.png)
 
 ##### 训练流程
 
-![image-20240722105153601](./RL_note_cheatsheet.assets/image-20240722105153601.png)
+![image-20240722105153601](./RL_note.assets/image-20240722105153601.png)
 
-![image-20240722105206000](./RL_note_cheatsheet.assets/image-20240722105206000.png)
+![image-20240722105206000](./RL_note.assets/image-20240722105206000.png)
 
 
 
@@ -1635,7 +1635,7 @@ batch normalization 的缺点包括:
 
   - 用目标网络（target network）缓解自举造成的偏差
 
-    ![image-20240722110003462](./RL_note_cheatsheet.assets/image-20240722110003462.png)
+    ![image-20240722110003462](./RL_note.assets/image-20240722110003462.png)
 
 - 训练过程
 
@@ -1650,7 +1650,7 @@ batch normalization 的缺点包括:
     - 梯度更新策略网络
     - 加权平均更新目标网络
 
-  ![image-20240722110023110](./RL_note_cheatsheet.assets/image-20240722110023110.png)
+  ![image-20240722110023110](./RL_note.assets/image-20240722110023110.png)
 
 
 
@@ -1664,31 +1664,31 @@ batch normalization 的缺点包括:
 
 - 策略学习的目的: 最大化策略目标函数
 
-  ![image-20240722110836904](./RL_note_cheatsheet.assets/image-20240722110836904.png)
+  ![image-20240722110836904](./RL_note.assets/image-20240722110836904.png)
 
 - 策略网络
 
-  ![image-20240722110915410](./RL_note_cheatsheet.assets/image-20240722110915410.png)
+  ![image-20240722110915410](./RL_note.assets/image-20240722110915410.png)
 
 - 策略梯度 $\nabla_\boldsymbol{\theta} J(\boldsymbol{\theta})$ 更新参数 $\boldsymbol{\theta}$
 
-  ![image-20240722110950185](./RL_note_cheatsheet.assets/image-20240722110950185.png)
+  ![image-20240722110950185](./RL_note.assets/image-20240722110950185.png)
 
 - 需要对 策略梯度 $\nabla_\boldsymbol{\theta} J(\boldsymbol{\theta})$ 做近似
 
-  ![image-20240722111330526](./RL_note_cheatsheet.assets/image-20240722111330526.png)
+  ![image-20240722111330526](./RL_note.assets/image-20240722111330526.png)
 
   - REINFORCE法
 
     - 蒙特卡洛近似动作价值函数 $Q_\pi$
 
-      ![image-20240722100845125](./RL_note_cheatsheet.assets/image-20240722100845125.png)
+      ![image-20240722100845125](./RL_note.assets/image-20240722100845125.png)
 
   - actor-critic 法
 
     - 通过神经网络(价值网络)近似 $Q_\pi$
 
-      ![image-20240722103525421](./RL_note_cheatsheet.assets/image-20240722103525421.png)
+      ![image-20240722103525421](./RL_note.assets/image-20240722103525421.png)
 
   
 
@@ -1700,25 +1700,25 @@ batch normalization 的缺点包括:
 
   - 用 $Q_π(S, A) − b$ 替换掉 $Q_π$
 
-    ![image-20240722111752724](./RL_note_cheatsheet.assets/image-20240722111752724.png)
+    ![image-20240722111752724](./RL_note.assets/image-20240722111752724.png)
 
   - 策略梯度近似为 $\boldsymbol{g}_b (s, a;\boldsymbol{\theta})$ 
 
-    ![image-20240722112109853](./RL_note_cheatsheet.assets/image-20240722112109853.png)
+    ![image-20240722112109853](./RL_note.assets/image-20240722112109853.png)
 
   - **$b$ 的取值不影响策略梯度的正确性**
 
-    ![image-20240722112006979](./RL_note_cheatsheet.assets/image-20240722112006979.png)
+    ![image-20240722112006979](./RL_note.assets/image-20240722112006979.png)
 
   - **$b$ 对随机梯度 $\boldsymbol{g}_b (s, a; \boldsymbol{θ})$ 是有影响的**, 方差更小，收敛速度更快
 
-    ![image-20240722112024506](./RL_note_cheatsheet.assets/image-20240722112024506.png)
+    ![image-20240722112024506](./RL_note.assets/image-20240722112024506.png)
 
     - 如果 $b$ 很接近 $Q_π(s, a)$ 关于 $a$ 的均值，那么**方差会比较小**
 
   - 基线的直观理解
 
-    ![image-20240722112259398](./RL_note_cheatsheet.assets/image-20240722112259398.png)
+    ![image-20240722112259398](./RL_note.assets/image-20240722112259398.png)
 
     - 在乎的是动作价值 $Q_π(s_t , 左)$、$Q_π(s_t , 右)$、$Q_π(s_t , 上)$ 三者的相 对大小，而非绝对大小。如果给三者都减去 b = 60，那么三者的相对大小是不变的；
     - **优点是随机梯度的方差会变小, 收敛变快**
@@ -1731,69 +1731,69 @@ batch normalization 的缺点包括:
 
 - 使用状态价值函数 $V_\pi(s)$ 作为基线, 策略梯度的无偏估计为:
 
-  ![image-20240722112953098](./RL_note_cheatsheet.assets/image-20240722112953098.png)
+  ![image-20240722112953098](./RL_note.assets/image-20240722112953098.png)
 
 - 回报 $u$ 代替 动作价值函数 $Q_\pi(s, a)$
 
 - 价值网络 $v(s; \boldsymbol{w})$ $v(s;\boldsymbol{w})$ 近似 状态价值函数 $V_\pi(s)$
 
-  ![image-20240724113038083](./RL_note_cheatsheet.assets/image-20240724113038083.png)
+  ![image-20240724113038083](./RL_note.assets/image-20240724113038083.png)
 
-  ![image-20240724130545414](./RL_note_cheatsheet.assets/image-20240724130545414.png)
+  ![image-20240724130545414](./RL_note.assets/image-20240724130545414.png)
 
   - 通过回归训练价值网络, 状态价值是回报的期望
 
-    ![image-20240724131052854](./RL_note_cheatsheet.assets/image-20240724131052854.png)
+    ![image-20240724131052854](./RL_note.assets/image-20240724131052854.png)
 
   - 训练价值网络的目的是让 $v(s_t ; \boldsymbol{w})$ 拟合 $V_π(s_t)$，即拟合 $u_t$ 的期望。
 
   - 损失函数
 
-    ![image-20240724131806797](./RL_note_cheatsheet.assets/image-20240724131806797.png)
+    ![image-20240724131806797](./RL_note.assets/image-20240724131806797.png)
 
   - 价值网络进行预测 $\hat{v}_t$ = $v(s_t ; \boldsymbol{w})$ ，损失函数的梯度
 
-    ![image-20240724132008127](./RL_note_cheatsheet.assets/image-20240724132008127.png)
+    ![image-20240724132008127](./RL_note.assets/image-20240724132008127.png)
 
   - 更新价值网络
 
-    ![image-20240724132021292](./RL_note_cheatsheet.assets/image-20240724132021292.png)
+    ![image-20240724132021292](./RL_note.assets/image-20240724132021292.png)
 
 - 策略网络 $\pi(a|s;\boldsymbol{\theta})$
 
-  ![image-20240724130817489](./RL_note_cheatsheet.assets/image-20240724130817489.png)
+  ![image-20240724130817489](./RL_note.assets/image-20240724130817489.png)
 
   - 奖励
 
-    ![image-20240724132541135](./RL_note_cheatsheet.assets/image-20240724132541135.png)
+    ![image-20240724132541135](./RL_note.assets/image-20240724132541135.png)
 
   - 回报
 
-    ![image-20240724132611784](./RL_note_cheatsheet.assets/image-20240724132611784.png)
+    ![image-20240724132611784](./RL_note.assets/image-20240724132611784.png)
 
   - 价值网络预测，作为基线
 
-    ![image-20240724132641488](./RL_note_cheatsheet.assets/image-20240724132641488.png)
+    ![image-20240724132641488](./RL_note.assets/image-20240724132641488.png)
 
   - 带基线的近似策略梯度
 
-    ![image-20240724132723950](./RL_note_cheatsheet.assets/image-20240724132723950.png)
+    ![image-20240724132723950](./RL_note.assets/image-20240724132723950.png)
 
   - 梯度上升更新 策略网络 $\pi(a|s;\boldsymbol{\theta})$
 
-    ![image-20240724132808946](./RL_note_cheatsheet.assets/image-20240724132808946.png)
+    ![image-20240724132808946](./RL_note.assets/image-20240724132808946.png)
 
 - 总体训练流程
 
-  ![image-20240724132851434](./RL_note_cheatsheet.assets/image-20240724132851434.png)
+  ![image-20240724132851434](./RL_note.assets/image-20240724132851434.png)
 
-  ![image-20240724133149113](./RL_note_cheatsheet.assets/image-20240724133149113.png)
+  ![image-20240724133149113](./RL_note.assets/image-20240724133149113.png)
 
 
 
 #### 基线 actor-critic A2C (advantage actor-critic)
 
-![image-20240724144911170](./RL_note_cheatsheet.assets/image-20240724144911170.png)
+![image-20240724144911170](./RL_note.assets/image-20240724144911170.png)
 
 - A2C 的结构
 
@@ -1815,67 +1815,67 @@ batch normalization 的缺点包括:
 
   - 贝尔曼方程
 
-    ![image-20240724133955644](./RL_note_cheatsheet.assets/image-20240724133955644.png)
+    ![image-20240724133955644](./RL_note.assets/image-20240724133955644.png)
 
   - 左侧近似为价值网络在 t 时刻 对 $V_\pi(s_t)$  的估计 $v(s_t; \boldsymbol{w})$ 
 
   - 右侧对期望进行蒙特卡洛近似
 
-    ![image-20240724134207736](./RL_note_cheatsheet.assets/image-20240724134207736.png)
+    ![image-20240724134207736](./RL_note.assets/image-20240724134207736.png)
 
   - $V_\pi(s_{t+1})$ 近似成 $v(s_{t+1}; \boldsymbol{w})$ , 作为 TD 目标
 
-    ![image-20240724140600744](./RL_note_cheatsheet.assets/image-20240724140600744.png)
+    ![image-20240724140600744](./RL_note.assets/image-20240724140600744.png)
 
   - $\hat{y}_t$ 比 $v(s_t; \boldsymbol{w})$ 更可靠，更新 $\boldsymbol{w}$, 使 $v(s_t; \boldsymbol{w})$ 更接近 $\hat{y}_t$
 
   - 损失函数
 
-    ![image-20240724140826256](./RL_note_cheatsheet.assets/image-20240724140826256.png)
+    ![image-20240724140826256](./RL_note.assets/image-20240724140826256.png)
 
-    ![image-20240724140850423](./RL_note_cheatsheet.assets/image-20240724140850423.png)
+    ![image-20240724140850423](./RL_note.assets/image-20240724140850423.png)
 
   - 损失函数的梯度
 
-    ![image-20240724140908994](./RL_note_cheatsheet.assets/image-20240724140908994.png)
+    ![image-20240724140908994](./RL_note.assets/image-20240724140908994.png)
 
   - 梯度下降更新 $\boldsymbol{w}$
 
-    ![image-20240724140952868](./RL_note_cheatsheet.assets/image-20240724140952868.png)
+    ![image-20240724140952868](./RL_note.assets/image-20240724140952868.png)
 
 - 训练策略网络 $\pi(a|s;\boldsymbol{\theta})$
 
   - 带基线的策略梯度的蒙特卡洛近似
 
-    ![image-20240724143525337](./RL_note_cheatsheet.assets/image-20240724143525337.png)
+    ![image-20240724143525337](./RL_note.assets/image-20240724143525337.png)
 
   - 通过价值函数和下一时刻状态 $s_{t+1}$ 对 $Q_\pi{s, a}$ 近似
 
-    ![image-20240724143656991](./RL_note_cheatsheet.assets/image-20240724143656991.png)
+    ![image-20240724143656991](./RL_note.assets/image-20240724143656991.png)
 
   - 用价值网络代替价值函数，获得 TD 目标
 
-    ![image-20240724143858109](./RL_note_cheatsheet.assets/image-20240724143858109.png)
+    ![image-20240724143858109](./RL_note.assets/image-20240724143858109.png)
 
   - TD误差
 
-    ![image-20240724143939403](./RL_note_cheatsheet.assets/image-20240724143939403.png)
+    ![image-20240724143939403](./RL_note.assets/image-20240724143939403.png)
 
   - 策略梯度 $\nabla_{\boldsymbol{\theta}}J(\boldsymbol{\theta})$ 的近似 $\tilde{\boldsymbol{g}}$ 
 
-    ![image-20240724144009487](./RL_note_cheatsheet.assets/image-20240724144009487.png)
+    ![image-20240724144009487](./RL_note.assets/image-20240724144009487.png)
 
   - 策略网络梯度上升更新参数 $\boldsymbol{\theta}$
 
-    ![image-20240724144759442](./RL_note_cheatsheet.assets/image-20240724144759442.png)
+    ![image-20240724144759442](./RL_note.assets/image-20240724144759442.png)
 
 - 整体训练流程
 
-  ![image-20240724145938760](./RL_note_cheatsheet.assets/image-20240724145938760.png)
+  ![image-20240724145938760](./RL_note.assets/image-20240724145938760.png)
 
 - 目标网络改进价值网络的自举问题
 
-  ![image-20240724150044688](./RL_note_cheatsheet.assets/image-20240724150044688.png)
+  ![image-20240724150044688](./RL_note.assets/image-20240724150044688.png)
 
 
 
@@ -1889,25 +1889,25 @@ batch normalization 的缺点包括:
 
 - 优化问题 $\text{max}_\boldsymbol{θ}J(\boldsymbol{θ})$。$J(\boldsymbol{θ})$ 是目标函数，$\boldsymbol{θ}$ 是优化变量
 
-  ![image-20240724160333644](./RL_note_cheatsheet.assets/image-20240724160333644.png)
+  ![image-20240724160333644](./RL_note.assets/image-20240724160333644.png)
 
 - 置信域
 
   - 给定变量当前的值 $θ_{\text{now}}$，用 $\mathcal{N} (\boldsymbol{θ}_{\text{now}})$ 表示 $\boldsymbol{θ}\text{now}$ 的一个邻域
 
-    ![image-20240724160835701](./RL_note_cheatsheet.assets/image-20240724160835701.png)
+    ![image-20240724160835701](./RL_note.assets/image-20240724160835701.png)
 
-    ![image-20240724160849802](./RL_note_cheatsheet.assets/image-20240724160849802.png)
+    ![image-20240724160849802](./RL_note.assets/image-20240724160849802.png)
 
   - 置信域内的近似函数
 
     - 近似函数 $L(\boldsymbol{\theta | \theta_{\text{now}}})$ 较为简单， 方便优化
 
-    ![image-20240724160931128](./RL_note_cheatsheet.assets/image-20240724160931128.png)
+    ![image-20240724160931128](./RL_note.assets/image-20240724160931128.png)
 
   - 通过优化置信域内的近似函数 $L(\boldsymbol{\theta | \theta_{\text{now}}})$ 来更新 $\boldsymbol{\theta}$
 
-    ![image-20240724161243610](./RL_note_cheatsheet.assets/image-20240724161243610.png)
+    ![image-20240724161243610](./RL_note.assets/image-20240724161243610.png)
 
   - 步骤
 
@@ -1921,7 +1921,7 @@ batch normalization 的缺点包括:
 
       - 解一个带约束的最大化问题
 
-      ![image-20240724161908439](./RL_note_cheatsheet.assets/image-20240724161908439.png)
+      ![image-20240724161908439](./RL_note.assets/image-20240724161908439.png)
 
       - 梯度投影算法、拉格朗日法...
 
@@ -1937,11 +1937,11 @@ batch normalization 的缺点包括:
 
 - 状态价值函数 $V_\pi(s)$
 
-  ![image-20240724171153074](./RL_note_cheatsheet.assets/image-20240724171153074.png)
+  ![image-20240724171153074](./RL_note.assets/image-20240724171153074.png)
 
 - 策略学习的目标函数 $J(\theta)$ 的
 
-  ![image-20240724171226966](./RL_note_cheatsheet.assets/image-20240724171226966.png)
+  ![image-20240724171226966](./RL_note.assets/image-20240724171226966.png)
 
 - 原始的策略梯度方法通过以下方式近似策略梯度，使目标函数增大
 
@@ -1953,11 +1953,11 @@ batch normalization 的缺点包括:
   - 连加中的第一项可以消掉第二项的分母
   - 把策略网络 $π(A|s; θ_\text{now})$ 看做动作 A 的概率质量函数，所以可以把连加写成期望
 
-  ![image-20240724171800635](./RL_note_cheatsheet.assets/image-20240724171800635.png)
+  ![image-20240724171800635](./RL_note.assets/image-20240724171800635.png)
 
 - 策略目标函数$J(\theta)$ 的等价形式
 
-  ![image-20240724172112681](./RL_note_cheatsheet.assets/image-20240724172112681.png)
+  ![image-20240724172112681](./RL_note.assets/image-20240724172112681.png)
 
 - TRPO 的推导
 
@@ -1965,47 +1965,47 @@ batch normalization 的缺点包括:
 
     - 策略网络 $π(A | S; θ_{\text{now}})$ 控制智能体跟环境交互从头到尾玩完一局游戏， 观测到一条轨迹：
 
-      ![image-20240724172401569](./RL_note_cheatsheet.assets/image-20240724172401569.png)
+      ![image-20240724172401569](./RL_note.assets/image-20240724172401569.png)
 
     - 状态 ${s_t}^n_{t=1}$ 从环境中观测到
     - 动作 ${a_t}^n_{t=1}$ 根据策略网络 $π(· | s_t ; \boldsymbol{θ}_\text{now})$ 抽取的样本
 
     - $L(\boldsymbol{\theta}|\boldsymbol{\theta}_\text{now})$ 策略目标函数$J(\theta)$ 的等价形式的无偏估计，即蒙特卡洛近似
 
-      ![image-20240724172957421](./RL_note_cheatsheet.assets/image-20240724172957421.png)
+      ![image-20240724172957421](./RL_note.assets/image-20240724172957421.png)
 
     - 用 $u_t$ 近似 $Q_\pi(s_t, a_t)$
 
       - 这里需要假设 $\boldsymbol{\theta}$ 接近 $\boldsymbol{\theta}_{\text{now}}$
 
-      ![image-20240724173307026](./RL_note_cheatsheet.assets/image-20240724173307026.png)
+      ![image-20240724173307026](./RL_note.assets/image-20240724173307026.png)
 
-      ![image-20240724173321067](./RL_note_cheatsheet.assets/image-20240724173321067.png)
+      ![image-20240724173321067](./RL_note.assets/image-20240724173321067.png)
 
-      ![image-20240724173717722](./RL_note_cheatsheet.assets/image-20240724173717722.png)
+      ![image-20240724173717722](./RL_note.assets/image-20240724173717722.png)
 
   - 步骤2：最大化 
 
     - 求解带约束的最大化问题
 
-      ![image-20240724174655565](./RL_note_cheatsheet.assets/image-20240724174655565.png)
+      ![image-20240724174655565](./RL_note.assets/image-20240724174655565.png)
 
     - 置信域方法1：球形置信域
 
       - 置信域是简单的形状，求解最大化问题比较容易
       - 效果不如KL散度
 
-      ![image-20240724174747957](./RL_note_cheatsheet.assets/image-20240724174747957.png)
+      ![image-20240724174747957](./RL_note.assets/image-20240724174747957.png)
 
     - 置信域方法2： KL 散度
 
       - 衡量两个概率质量函数 $π(·|s_i ; \boldsymbol{θ}_\text{now})$ 和 $π(·|s_i ; \boldsymbol{θ})$ 的距离。
 
-      ![image-20240724174926689](./RL_note_cheatsheet.assets/image-20240724174926689.png)
+      ![image-20240724174926689](./RL_note.assets/image-20240724174926689.png)
 
 - 训练流程
 
-  ![image-20240724180435753](./RL_note_cheatsheet.assets/image-20240724180435753.png)
+  ![image-20240724180435753](./RL_note.assets/image-20240724180435753.png)
 
 
 
@@ -2015,16 +2015,16 @@ batch normalization 的缺点包括:
 
 - 策略网络的输出
 
-  ![image-20240725132914082](./RL_note_cheatsheet.assets/image-20240725132914082.png)
+  ![image-20240725132914082](./RL_note.assets/image-20240725132914082.png)
 
   - 过于确定的决策，导致智能体安于现状，不去尝试没做过的动作，不去探索更多的状 态，无法找到更好的策略。
   - 策略网络的输出的概率不要集中在一个动作上，至少要给其他的动作一些 非零的概率，让这些动作能被探索到。可以用熵 (Entropy) 来衡量概率分布的不确定性
 
 - 对于离散概率分布 $\boldsymbol{p} = [p_1, p_2, p_3]$ 的熵
 
-  ![image-20240725133529447](./RL_note_cheatsheet.assets/image-20240725133529447.png)
+  ![image-20240725133529447](./RL_note.assets/image-20240725133529447.png)
 
-![image-20240725133543620](./RL_note_cheatsheet.assets/image-20240725133543620.png)
+![image-20240725133543620](./RL_note.assets/image-20240725133543620.png)
 
 - 策略学习中的熵正则
 
@@ -2032,28 +2032,28 @@ batch normalization 的缺点包括:
 
   - 熵 $H(s; \boldsymbol{θ})$ 只依赖于状态 s 与策略网络参数 $\boldsymbol{θ}$
 
-    ![image-20240725133921952](./RL_note_cheatsheet.assets/image-20240725133921952.png)
+    ![image-20240725133921952](./RL_note.assets/image-20240725133921952.png)
 
   - 用熵正则的策略学习的目标函数
 
     - 最大化状态价值函数 $V_\pi(s)$ 的期望，即 $J(\boldsymbol{\theta})$ 
     - 最大化熵 $\mathbb{E}_S[H(S; \boldsymbol{\theta})]$
 
-    ![image-20240725134132416](./RL_note_cheatsheet.assets/image-20240725134132416.png)
+    ![image-20240725134132416](./RL_note.assets/image-20240725134132416.png)
 
-    ![image-20240725134159132](./RL_note_cheatsheet.assets/image-20240725134159132.png)
+    ![image-20240725134159132](./RL_note.assets/image-20240725134159132.png)
 
   - 目标函数关于 $\boldsymbol{\theta}$ 的梯度 $ \boldsymbol{g}(\boldsymbol{\theta}) $
 
-    ![image-20240725135519016](./RL_note_cheatsheet.assets/image-20240725135519016.png)
+    ![image-20240725135519016](./RL_note.assets/image-20240725135519016.png)
 
   - 梯度 $ \boldsymbol{g}(\boldsymbol{\theta}) $ 的无偏估计 $ \tilde{\boldsymbol{g}}(\boldsymbol{\theta}) $ 
 
-    ![image-20240725135807701](./RL_note_cheatsheet.assets/image-20240725135807701.png)
+    ![image-20240725135807701](./RL_note.assets/image-20240725135807701.png)
 
   - 更新策略网络的参数
 
-    ![image-20240725135835117](./RL_note_cheatsheet.assets/image-20240725135835117.png)
+    ![image-20240725135835117](./RL_note.assets/image-20240725135835117.png)
 
 ### 连续控制
 
@@ -2064,7 +2064,7 @@ batch normalization 的缺点包括:
 
 - 连续空间离散化
 
-  ![image-20240726103139052](./RL_note_cheatsheet.assets/image-20240726103139052.png)
+  ![image-20240726103139052](./RL_note.assets/image-20240726103139052.png)
 
   - 缺点：如果动作空间太大，DQN 和策略网络的训练都变得很困难
   - 离散化方法只适用于自由度 d 很小的情况
@@ -2079,7 +2079,7 @@ batch normalization 的缺点包括:
     - 本次的确定策略网络输出**d维的向量**，直接作为动作 a
   - 价值网络 （critic）：价值网络不控制智能体，只是基于状态 s 给动作 a 打分，从而指导策略网络做出改进
 
-​	![image-20240726103431955](./RL_note_cheatsheet.assets/image-20240726103431955.png)
+​	![image-20240726103431955](./RL_note.assets/image-20240726103431955.png)
 
 
 
@@ -2087,14 +2087,14 @@ batch normalization 的缺点包括:
 
 - **确定策略网络** $\boldsymbol{\mu}(s;\boldsymbol{\theta})$
 
-  ![image-20240726105104943](./RL_note_cheatsheet.assets/image-20240726105104943.png)
+  ![image-20240726105104943](./RL_note.assets/image-20240726105104943.png)
 
   -  $\boldsymbol{\mu} (s; \boldsymbol{θ})$ 的输出是 d 维向量
   - 第 i 个元素：$\hat{\mu}_i = [\boldsymbol{\mu}(s;\boldsymbol{\theta})]_i$
 
   - 随机策略的分布
 
-    ![image-20240726105413513](./RL_note_cheatsheet.assets/image-20240726105413513.png)
+    ![image-20240726105413513](./RL_note.assets/image-20240726105413513.png)
 
     - 这个随机策略是均值为 $\boldsymbol{\mu}(s; \boldsymbol{θ})$、协方差矩阵为 $\text{diag}(σ_1, \cdots, σ_d)$ 的**多元正态分布**
     - 确定策略可以看做是上述随机策略在 $\boldsymbol{σ} = [σ_1, \cdots , σ_d]$ 为全零向量时的特例
@@ -2108,7 +2108,7 @@ batch normalization 的缺点包括:
   - 训练的过程中，价值网络帮助训练策略网络
   - 在训练结束之后，价值网络就被丢弃，由策略网络控制智能体
 
-  ![image-20240726110732118](./RL_note_cheatsheet.assets/image-20240726110732118.png)
+  ![image-20240726110732118](./RL_note.assets/image-20240726110732118.png)
 
 
 
@@ -2126,7 +2126,7 @@ batch normalization 的缺点包括:
 
   - 训练价值网络 $q(s, \boldsymbol{a};\boldsymbol{w})$ 用到四元组中全部四个元素：$s_j , a_j , r_j , s_{j+1}$
 
-    ![image-20240726113037458](./RL_note_cheatsheet.assets/image-20240726113037458.png)
+    ![image-20240726113037458](./RL_note.assets/image-20240726113037458.png)
 
 
 
@@ -2134,33 +2134,33 @@ batch normalization 的缺点包括:
 
 - 训练策略网络
 
-  ![image-20240726113112571](./RL_note_cheatsheet.assets/image-20240726113112571.png)
+  ![image-20240726113112571](./RL_note.assets/image-20240726113112571.png)
 
   - 给定状态 $s$， 策略网络输出一个动作 $\boldsymbol{a} = \boldsymbol{\mu}(s; \boldsymbol{θ})$，然后价值网络会给 $\boldsymbol{a}$ 打一个分数：$\hat{q} = q(s, \boldsymbol{a}; \boldsymbol{w})$，参数 $\boldsymbol{\theta}$ 影响 $\boldsymbol{a}$，从而影响 $\hat{q}$。分数 $\hat{q}$ 可以反映出 $\boldsymbol{\theta}$ 的好坏程度。训练策略网络的目标就是改进参数  $\boldsymbol{\theta}$，使 $\hat{q}$ 变得更大。
 
   - 价值网络的打分评价
 
-    ![image-20240726140456290](./RL_note_cheatsheet.assets/image-20240726140456290.png)
+    ![image-20240726140456290](./RL_note.assets/image-20240726140456290.png)
 
   - 目标函数为为价值网络的打分期望
 
-    ![image-20240726140537299](./RL_note_cheatsheet.assets/image-20240726140537299.png)
+    ![image-20240726140537299](./RL_note.assets/image-20240726140537299.png)
 
   - 策略网络的学习为以下最大化问题
 
-    ![image-20240726141339025](./RL_note_cheatsheet.assets/image-20240726141339025.png)
+    ![image-20240726141339025](./RL_note.assets/image-20240726141339025.png)
 
     - 只训练策略网络，所以最大化问题中的优化变量是策略网络的参数 θ，而 价值网络的参数 w 被固定住。
 
   - 确定策略梯度 DPG（deterministic policy gradient）
 
-    ![image-20240726141450258](./RL_note_cheatsheet.assets/image-20240726141450258.png)
+    ![image-20240726141450258](./RL_note.assets/image-20240726141450258.png)
 
   - 用链式法则求出梯度 $\boldsymbol{g}_j$ ，函数关系 $\boldsymbol{θ} → \boldsymbol{a} → \boldsymbol{q}$，  $\boldsymbol{q}$ 关于 $\boldsymbol{θ}$ 的导数
 
-    ![image-20240726142206862](./RL_note_cheatsheet.assets/image-20240726142206862.png)
+    ![image-20240726142206862](./RL_note.assets/image-20240726142206862.png)
 
-    ![image-20240726142245290](./RL_note_cheatsheet.assets/image-20240726142245290.png)
+    ![image-20240726142245290](./RL_note.assets/image-20240726142245290.png)
 
     
 
@@ -2168,7 +2168,7 @@ batch normalization 的缺点包括:
 
   - 更新 $\boldsymbol{\theta}$， 使目标函数 $J(\boldsymbol{\theta})$ 增大
 
-    ![image-20240726142511719](./RL_note_cheatsheet.assets/image-20240726142511719.png)
+    ![image-20240726142511719](./RL_note.assets/image-20240726142511719.png)
 
 - 训练价值网络
 
@@ -2182,31 +2182,31 @@ batch normalization 的缺点包括:
 
   - 价值网络做预测
 
-    ![image-20240726143806978](./RL_note_cheatsheet.assets/image-20240726143806978.png)
+    ![image-20240726143806978](./RL_note.assets/image-20240726143806978.png)
 
-    ![image-20240726143819098](./RL_note_cheatsheet.assets/image-20240726143819098.png)
+    ![image-20240726143819098](./RL_note.assets/image-20240726143819098.png)
 
   - 计算 TD 目标
 
-    ![image-20240726143848143](./RL_note_cheatsheet.assets/image-20240726143848143.png)
+    ![image-20240726143848143](./RL_note.assets/image-20240726143848143.png)
 
   - 损失函数
 
-    ![image-20240726143934597](./RL_note_cheatsheet.assets/image-20240726143934597.png)
+    ![image-20240726143934597](./RL_note.assets/image-20240726143934597.png)
 
   - 计算梯度
 
-    ![image-20240726143955771](./RL_note_cheatsheet.assets/image-20240726143955771.png)
+    ![image-20240726143955771](./RL_note.assets/image-20240726143955771.png)
 
   - 梯度下降更新参数 $\boldsymbol{w}$
 
-    ![image-20240726144103995](./RL_note_cheatsheet.assets/image-20240726144103995.png)
+    ![image-20240726144103995](./RL_note.assets/image-20240726144103995.png)
 
 - 整体训练流程
 
-  ![image-20240726144602861](./RL_note_cheatsheet.assets/image-20240726144602861.png)
+  ![image-20240726144602861](./RL_note.assets/image-20240726144602861.png)
 
-  ![image-20240726144616768](./RL_note_cheatsheet.assets/image-20240726144616768.png)
+  ![image-20240726144616768](./RL_note.assets/image-20240726144616768.png)
 
 
 
@@ -2222,7 +2222,7 @@ batch normalization 的缺点包括:
 
     - 在理想情况下， 行为策略对价值网络没有影响
 
-      ![image-20240726145837048](./RL_note_cheatsheet.assets/image-20240726145837048.png)
+      ![image-20240726145837048](./RL_note.assets/image-20240726145837048.png)
 
 ##### 价值学习的角度看待DPG
 
@@ -2230,23 +2230,23 @@ batch normalization 的缺点包括:
 
   - 给定当前状态 $s_t$，选择最大化 Q 值的动作
 
-    ![image-20240726150409702](./RL_note_cheatsheet.assets/image-20240726150409702.png)
+    ![image-20240726150409702](./RL_note.assets/image-20240726150409702.png)
 
   - DQN 记作 $Q(s, a; \boldsymbol{w})$，它是 $Q_⋆(s, a; \boldsymbol{w})$ 的函数近似
 
   - 训练好 DQN 之后，可以这样做决策
 
-    ![image-20240726150631519](./RL_note_cheatsheet.assets/image-20240726150631519.png)
+    ![image-20240726150631519](./RL_note.assets/image-20240726150631519.png)
 
 - 连续动作空间下的DPG
 
   - 希望学到策略网络 $\boldsymbol{\mu}(s; \boldsymbol{θ})$ 和价值网络 $\boldsymbol{q}(s, a; \boldsymbol{w})$，使得
 
-    ![image-20240726150830495](./RL_note_cheatsheet.assets/image-20240726150830495.png)
+    ![image-20240726150830495](./RL_note.assets/image-20240726150830495.png)
 
   - 把 µ 和 q 看做是 Q⋆ 的近似分解，而这种分解的目的在于方便做决策
 
-    ![image-20240726150914477](./RL_note_cheatsheet.assets/image-20240726150914477.png)
+    ![image-20240726150914477](./RL_note.assets/image-20240726150914477.png)
 
 ##### DPG的高估问题
 
@@ -2254,7 +2254,7 @@ batch normalization 的缺点包括:
 
   - TD 目标会造成高估
 
-    ![image-20240726152218600](./RL_note_cheatsheet.assets/image-20240726152218600.png)
+    ![image-20240726152218600](./RL_note.assets/image-20240726152218600.png)
 
   - 是自举会导致高估的传播
 
@@ -2262,7 +2262,7 @@ batch normalization 的缺点包括:
 
   - TD 目标是对真实动作价值 的高估
 
-    ![image-20240726152351401](./RL_note_cheatsheet.assets/image-20240726152351401.png)
+    ![image-20240726152351401](./RL_note.assets/image-20240726152351401.png)
 
   - 自举导致高估的传播
 
@@ -2282,23 +2282,23 @@ batch normalization 的缺点包括:
 
 - 高估问题解决方法-目标网络
 
-  ![image-20240726153301863](./RL_note_cheatsheet.assets/image-20240726153301863.png)
+  ![image-20240726153301863](./RL_note.assets/image-20240726153301863.png)
 
   - 通过目标网络计算TD，防止自举
 
     - 目标价值网络 $q(s, \boldsymbol{a}; \boldsymbol{w}^−)$
     - 目标策略网络 $\boldsymbol{\mu}(s; \boldsymbol{θ}^−)$
 
-    ![image-20240726153154442](./RL_note_cheatsheet.assets/image-20240726153154442.png)
+    ![image-20240726153154442](./RL_note.assets/image-20240726153154442.png)
 
-    ![image-20240726153211302](./RL_note_cheatsheet.assets/image-20240726153211302.png)
+    ![image-20240726153211302](./RL_note.assets/image-20240726153211302.png)
 
   - 把 $\hat{y}j$ 作为目标，更新 $\boldsymbol{w}$，鼓励 $q(s_j , a_j ; \boldsymbol{w})$ 接近 $\hat{y}_j^−$
     - 一定程度上缓解高估，但是实验表明高估仍然很严重
 
 - 截断双Q学习算法
 
-  ![image-20240726155809276](./RL_note_cheatsheet.assets/image-20240726155809276.png)
+  ![image-20240726155809276](./RL_note.assets/image-20240726155809276.png)
 
   - 价值网络1 $q(s, \boldsymbol{a}; \boldsymbol{w}_1)$
     - 目标价值网络1 $q(s, \boldsymbol{a}; \boldsymbol{w}_1^-)$
@@ -2311,13 +2311,13 @@ batch normalization 的缺点包括:
 
     - 目标策略网络计算动作
 
-      ![image-20240726160152223](./RL_note_cheatsheet.assets/image-20240726160152223.png)
+      ![image-20240726160152223](./RL_note.assets/image-20240726160152223.png)
 
     - 目标价值网络计算TD （取两个目标价值网络的最小值）
 
-      ![image-20240726160217186](./RL_note_cheatsheet.assets/image-20240726160217186.png)
+      ![image-20240726160217186](./RL_note.assets/image-20240726160217186.png)
 
-      ![image-20240726160251053](./RL_note_cheatsheet.assets/image-20240726160251053.png)
+      ![image-20240726160251053](./RL_note.assets/image-20240726160251053.png)
 
 - 其他改进方法
 
@@ -2326,9 +2326,9 @@ batch normalization 的缺点包括:
     - 使用截断正态分布，而非正态分布，是为了防止噪声 ξ 过大
     - 使用截断，保证噪声大小不会超过 −c 和 c
 
-    ![image-20240726160414405](./RL_note_cheatsheet.assets/image-20240726160414405.png)
+    ![image-20240726160414405](./RL_note.assets/image-20240726160414405.png)
 
-    ![image-20240726160533023](./RL_note_cheatsheet.assets/image-20240726160533023.png)
+    ![image-20240726160533023](./RL_note.assets/image-20240726160533023.png)
 
   - 方法2：减小更新策略网络和目标网络的频率
     - Actor-critic 用价值网络来指导策略网络的更新。如果价值网络 q 本身不可靠，那么用价值网络 q 给动作打的分数是不准确的，无助于改进策略网络 µ。在价值网络 q 还很差的时候就急于更新 µ，非但不能改进 µ，反而会由于 µ 的变化导致 q 的训练不稳定。
@@ -2354,16 +2354,16 @@ batch normalization 的缺点包括:
 
   - 初始化：策略网络和价值网络的参数都是随机的，同样值初始化目标网络
 
-    ![image-20240726170832182](./RL_note_cheatsheet.assets/image-20240726170832182.png)
+    ![image-20240726170832182](./RL_note.assets/image-20240726170832182.png)
 
     - 下标 now 表示神经网络当前的参数
     - 下标 new 表示更新后的参数
 
   - 更新步骤
 
-    ![image-20240726170937879](./RL_note_cheatsheet.assets/image-20240726170937879.png)
+    ![image-20240726170937879](./RL_note.assets/image-20240726170937879.png)
 
-    ![image-20240726170951102](./RL_note_cheatsheet.assets/image-20240726170951102.png)
+    ![image-20240726170951102](./RL_note.assets/image-20240726170951102.png)
 
 
 
@@ -2377,11 +2377,11 @@ batch normalization 的缺点包括:
 
   - 自由度 $d = 1$ 的情况
 
-  ![image-20240726175305638](./RL_note_cheatsheet.assets/image-20240726175305638.png)
+  ![image-20240726175305638](./RL_note.assets/image-20240726175305638.png)
 
   - 通过以下方式做控制
 
-    ![image-20240726175341831](./RL_note_cheatsheet.assets/image-20240726175341831.png)
+    ![image-20240726175341831](./RL_note.assets/image-20240726175341831.png)
 
   - 通过神经网络近似均值函数 $\mu(s)$ 和标准差函数 $\sigma(s)$
 
@@ -2391,55 +2391,55 @@ batch normalization 的缺点包括:
 
   - 预测方差对数神经网络 $\rho(s;\boldsymbol{\theta})$ 
 
-    ![image-20240726175935728](./RL_note_cheatsheet.assets/image-20240726175935728.png)
+    ![image-20240726175935728](./RL_note.assets/image-20240726175935728.png)
 
   - 神经网络近似后的随机高斯策略函数
 
-    ![image-20240726180032948](./RL_note_cheatsheet.assets/image-20240726180032948.png)
+    ![image-20240726180032948](./RL_note.assets/image-20240726180032948.png)
 
   - 自由度大于1的情况，动作 a 是 d 维向量，多元正态分布的概率密度函数作为策略网络
 
-    ![image-20240726180300641](./RL_note_cheatsheet.assets/image-20240726180300641.png)
+    ![image-20240726180300641](./RL_note.assets/image-20240726180300641.png)
 
   - 训练时需要辅助网络  $f(s, \boldsymbol{a}; \boldsymbol{θ})$ 
 
-    ![image-20240726180328912](./RL_note_cheatsheet.assets/image-20240726180328912.png)
+    ![image-20240726180328912](./RL_note.assets/image-20240726180328912.png)
 
-    ![image-20240726180407445](./RL_note_cheatsheet.assets/image-20240726180407445.png)
+    ![image-20240726180407445](./RL_note.assets/image-20240726180407445.png)
 
   - 辅助网络与策略网络的关系
 
-    ![image-20240726180715725](./RL_note_cheatsheet.assets/image-20240726180715725.png)
+    ![image-20240726180715725](./RL_note.assets/image-20240726180715725.png)
 
 - 随机高斯策略网络的策略梯度
 
   - t 时刻的折扣回报记作随机变量
 
-    ![image-20240726180829640](./RL_note_cheatsheet.assets/image-20240726180829640.png)
+    ![image-20240726180829640](./RL_note.assets/image-20240726180829640.png)
 
   - 策略梯度的蒙特卡洛近似
 
-    ![image-20240726181340370](./RL_note_cheatsheet.assets/image-20240726181340370.png)
+    ![image-20240726181340370](./RL_note.assets/image-20240726181340370.png)
 
   - 加入辅助网络 $f(s, \boldsymbol{a}; \boldsymbol{\theta})$
 
-    ![image-20240726180715725](./RL_note_cheatsheet.assets/image-20240726180715725-1721988877035-4.png)
+    ![image-20240726180715725](./RL_note.assets/image-20240726180715725-1721988877035-4.png)
 
-    ![image-20240726181450436](./RL_note_cheatsheet.assets/image-20240726181450436.png)
+    ![image-20240726181450436](./RL_note.assets/image-20240726181450436.png)
 
   - 训练流程
 
-    ![image-20240726181541638](./RL_note_cheatsheet.assets/image-20240726181541638.png)
+    ![image-20240726181541638](./RL_note.assets/image-20240726181541638.png)
 
     - 通过以下方式近似动作价值 $Q_\pi{(s, \boldsymbol{a})}$ 
 
       - REINFORCE 用实际观测的折扣回报 $u_t$ 代替 $Q_π(s, \boldsymbol{a})$ (同时可以使用带基线的REINFORECE算法)
 
-        ![image-20240726182434930](./RL_note_cheatsheet.assets/image-20240726182434930.png)
+        ![image-20240726182434930](./RL_note.assets/image-20240726182434930.png)
 
       - actor-critic 用价值网络近似 $Q_π$
 
-        ![image-20240726182626476](./RL_note_cheatsheet.assets/image-20240726182626476.png)
+        ![image-20240726182626476](./RL_note.assets/image-20240726182626476.png)
 
         - 搭建好均值网络 $\boldsymbol{µ}$、方差对数网络 $\boldsymbol{ρ}$、辅助网络 $\boldsymbol{f}$、价值网络 $\boldsymbol{q}$
         - 用 SARSA 算法更新价值网络参数 $\boldsymbol{w}$
@@ -2448,13 +2448,13 @@ batch normalization 的缺点包括:
 
         - 更新过程
 
-          ![image-20240726182847436](./RL_note_cheatsheet.assets/image-20240726182847436.png)
+          ![image-20240726182847436](./RL_note.assets/image-20240726182847436.png)
 
-          ![image-20240726182902669](./RL_note_cheatsheet.assets/image-20240726182902669-1721989782203-6.png)
+          ![image-20240726182902669](./RL_note.assets/image-20240726182902669-1721989782203-6.png)
 
-          ![image-20240726182946984](./RL_note_cheatsheet.assets/image-20240726182946984.png)
+          ![image-20240726182946984](./RL_note.assets/image-20240726182946984.png)
 
-### 对状态的不完全观测
+### 对状态的不完全观测 引入RNN
 
 #### 不完全观测问题
 
@@ -2467,15 +2467,15 @@ batch normalization 的缺点包括:
 
   - 通过记忆过去的观测，使得观测越来越完整
 
-    ![image-20240726183921039](./RL_note_cheatsheet.assets/image-20240726183921039.png)
+    ![image-20240726183921039](./RL_note.assets/image-20240726183921039.png)
 
   - 初始到 t 时刻为止的所有观测
 
-    ![image-20240726184033148](./RL_note_cheatsheet.assets/image-20240726184033148.png)
+    ![image-20240726184033148](./RL_note.assets/image-20240726184033148.png)
 
   - 基于观测的策略网络
 
-    ![image-20240726184057668](./RL_note_cheatsheet.assets/image-20240726184057668.png)
+    ![image-20240726184057668](./RL_note.assets/image-20240726184057668.png)
 
     - 输入的观测 $\boldsymbol{o}_{1:t}$ 大小是变化的
       - d × t 的矩阵或 dt × 1 的向量，它的大小随 t 增长
@@ -2490,4 +2490,367 @@ batch normalization 的缺点包括:
 
 - 网络结构
 
-  ![image-20240726184501659](./RL_note_cheatsheet.assets/image-20240726184501659.png)
+  ![image-20240726184501659](./RL_note.assets/image-20240726184501659.png)
+
+![image-20240729112918725](./RL_note.assets/image-20240729112918725.png)
+
+- RNN 的好处在于不论输入序列的长度 t 是多少，从序列中提取出的特征向量 ht 的大小 是固定的
+- $\boldsymbol{h}_t$ 并非只依赖于 $\boldsymbol{x}_t$ 这一个向量，而是依赖于 $[\boldsymbol{x}_1, \cdots , \boldsymbol{x}_t ]$；理 想情况下，$\boldsymbol{h}_t$ 记住了 $[\boldsymbol{x}_1, \cdots , \boldsymbol{x}_t ]$ 中的主要信息
+
+- 简单循环层
+
+  ![image-20240729130913501](./RL_note.assets/image-20240729130913501.png)
+
+  ![image-20240729130802703](./RL_note.assets/image-20240729130802703.png)
+
+- 其他循环网络
+
+  - LSTM
+  - GRU
+
+
+
+#### RNN 作为策略网络
+
+- 不完全观测的设定下，我们希望策略网络能利用所有已经收集的观测
+
+  - 收集的观测 $\boldsymbol{o}_{1:t} = [o_1, \cdots, o_t]$
+  - 决策网络 $\boldsymbol{f}_t = \pi(a_t|\boldsymbol{o}_{1:t};\boldsymbol{\theta})$
+
+- RNN决策网络结构
+
+  ![image-20240729131741246](./RL_note.assets/image-20240729131741246.png)
+
+- 不完全观测DQN
+
+  ![image-20240729131834790](./RL_note.assets/image-20240729131834790.png)
+
+- 不完全观测价值网络
+
+  ![image-20240729131856254](./RL_note.assets/image-20240729131856254.png)
+
+
+
+
+
+## 模仿学习
+
+- 模仿学习（imitation learning）
+  - 不是强化学习，而是强化学习的一种替代品
+  - 与强化学习有相同的目的：两者的目的都是学习策略网络，从而控制智能体
+  - 模仿学习向人类专家学习，目标是让策略网络做出的决策 与人类专家相同；而强化学习利用环境反馈的奖励改进策略，目标是让累计奖励（即回 报）最大化。
+- 三种常见的模仿学习方法
+  - 行为克隆（behavior cloning）
+    - 行为克隆不 需要让智能体与环境交互，因此学习的“成本”很低
+  - 逆向强化学习（inverse reinforcement learning）
+    - 需要让智能体与环境交互
+  - 生成判别模仿学习（GAIL）
+    - 需要让智能体与环境交互
+
+
+
+
+
+### 行为克隆 
+
+- 行为克隆
+
+  - 目的是模仿人的动作，学出一个随机策略网络 $π(a|s; \boldsymbol{\theta})$ 或者确定策略网络 $\boldsymbol{\mu}(s; \boldsymbol{θ})$ 
+
+  - 本质是监督学习（分类或者回归）,而不是强化学习
+
+  - 数据集
+
+    - 状态 $s_j$
+    - 人类专家基于状态 $s_j$ 做出动作 $a_j$ (标签)
+
+    ![image-20240729133856253](./RL_note.assets/image-20240729133856253.png)
+
+  
+
+- 行为克隆 vs 强化学习
+
+  - 行为克隆训练出的策略网络通常效果不佳。人类不会探索奇怪的状态和动作，因此 数据集上的状态和动作缺乏多样性
+  - 见到陌生的状态，做出的决策可能会很糟糕
+  - 行为克隆存在“错误累加” 的缺陷。
+  - 强化学习的一个缺点在于需要与环境交互，需要探索，而且会 改变环境。
+  - 行为克隆的优势在于离线训练，可以避免与真实环境的交互，不会对环境产生影响。
+  - 行为克隆的成本低。可以先用行为克隆初始化策略网络（而不是随机初始 化），然后再做强化学习，这样可以减小对物理世界的有害影响。
+
+  
+
+  
+
+- 连续控制的行为克隆
+
+  - 动作空间 A 是连续集合 比如 A = [0, 360] × [0, 180]
+
+  - 确定策略网络 $\boldsymbol{\mu}(s;\boldsymbol{\theta})$ 
+
+    - 输入是状态 s，
+    - 输出是动作向量 $\boldsymbol{a}$，它的维度 d 是控制问题的自由度。
+
+    ![image-20240729134736761](./RL_note.assets/image-20240729134736761.png)
+
+  - 损失函数 MSE
+
+    - 行为克隆鼓励策略网络的决策 $\boldsymbol{\mu}(s;\boldsymbol{\theta})$  接近人做出的动作 $\boldsymbol{a}$
+
+    ![image-20240729134758996](./RL_note.assets/image-20240729134758996.png)
+
+  - 梯度更新 $\boldsymbol{\theta}$
+
+    ![image-20240729134903868](./RL_note.assets/image-20240729134903868.png)
+
+  - 训练流程
+
+    ![image-20240729134955714](./RL_note.assets/image-20240729134955714.png)
+
+
+
+
+
+- 离散控制的行为克隆
+
+  - 动作空间 A 是离散集合，例如 A = {左, 右, 上}
+
+    - 对类别标签 a 做 one-hot 编码
+
+      ![image-20240729135628004](./RL_note.assets/image-20240729135628004.png)
+
+  - 策略网络
+
+    - 输入是状态 s，
+    - 输出记作向量 f。f 的维度是 |A|，每个元素对应一个动作，表示选择该动作的概率值。
+    - 策略网络 $\pi(a|s; \boldsymbol{θ})$ 看做一个多类别分类器
+
+    ![image-20240729135318343](./RL_note.assets/image-20240729135318343.png)
+
+  
+
+  - 损失函数 交叉熵（cross entropy）
+
+    - 向量 $\boldsymbol{\bar{a}}$ 与 $\boldsymbol{f}$ 都可以看做是离散的概率分布，可以用交叉熵（cross entropy）衡量两个分布的区别
+
+      - 向量 $\boldsymbol{\bar{a}}$ 与 $\boldsymbol{f}$ 越接近，它们的交叉熵越小
+
+      ![image-20240729135827300](./RL_note.assets/image-20240729135827300.png)
+
+      ![image-20240729135911267](./RL_note.assets/image-20240729135911267.png)
+
+    - 梯度更新参数 $\boldsymbol{\theta}$
+
+      ![image-20240729135944357](./RL_note.assets/image-20240729135944357.png)
+
+  - 训练流程
+
+    ![image-20240729140620238](./RL_note.assets/image-20240729140620238.png)
+
+
+
+### 逆向强化学习 (IRL)
+
+- 逆向强化学习 IRL inverse reinforcement learning
+
+  - IRL 假设智能体可以与环境交互，环境会根据智能体的动作更新状态，但是不会给出奖励
+
+    - 智能体与环境交互的轨迹，**轨迹中没有奖励**
+
+      ![image-20240729142112621](./RL_note.assets/image-20240729142112621.png)
+
+    - 把奖励看做 $(s_t , a_t)$ 的函数，记作 $R_⋆ (s_t , a_t)$
+
+  - IRL 假设我们可以把人类专家的策略 $\pi_⋆ (a|s)$ 作为一个黑箱调用
+
+    - 不知道策略的解析表达式，但是可以使用黑箱策略控制智能体与环境交互，生成轨迹
+
+    - IRL 假设人类学习策略 $π_⋆$ 的方式与强化学习相同，都是最大化回报（即累计奖励） 的期望
+
+      ![image-20240729142414374](./RL_note.assets/image-20240729142414374.png)
+
+    - $π_⋆$ 与奖励函数 $R_⋆ (s, a)$ 密切相关，所以可以从 $π_⋆$ 反推出 $R_⋆ (s, a)$
+
+- 逆向强化学习的基本思想
+
+  ![image-20240729143030319](./RL_note.assets/image-20240729143030319.png)
+
+  - 最优策略对应的奖励函数是不唯一的
+
+  
+
+- 用奖励函数训练策略网络
+
+  ![image-20240729143614589](./RL_note.assets/image-20240729143614589.png)
+
+  ![image-20240729143628073](./RL_note.assets/image-20240729143628073.png)
+
+
+
+
+
+
+
+### 生成判别模仿学习 （GAIL）
+
+- 生成判别模仿学习（generative adversarial imitation learning，缩写 GAIL）
+  - 智能体与环境交互，但是无法从环境获得奖励
+  - GAIL 还需要收集人类专家的决策记录（即很多条轨迹）
+  - GAIL 的目标是学习一个策略网络，使得判别器无法区分一条轨迹是策略 网络的决策还是人类专家的决策
+
+
+
+
+
+#### 生成判别网络 (GAN)
+
+- 生成判别网络（generative adversarial network，缩写 GAN）
+
+- 生成器（generator）
+
+  - 负责生成假的样本
+
+    ![image-20240729144501873](./RL_note.assets/image-20240729144501873.png)
+
+  - 训练生成器
+
+    ![image-20240729144648761](./RL_note.assets/image-20240729144648761.png)
+
+  - 目标函数 交叉熵
+
+    ![image-20240729144736240](./RL_note.assets/image-20240729144736240.png)
+
+  - 梯度下降更新生成器参数
+
+    ![image-20240729144836287](./RL_note.assets/image-20240729144836287.png)
+
+- 判别器（discriminator）
+
+  - 负责判定一个样本是真是假
+
+    ![image-20240729144554908](./RL_note.assets/image-20240729144554908.png)
+
+  - 训练判别器
+
+    ![image-20240729144923828](./RL_note.assets/image-20240729144923828.png)
+
+  - 损失函数
+
+    ![image-20240729145008458](./RL_note.assets/image-20240729145008458.png)
+
+  - 梯度下降更新判别器参数
+
+    ![image-20240729145042445](./RL_note.assets/image-20240729145042445.png)
+
+- 整体训练流程
+
+  ![image-20240729145149955](./RL_note.assets/image-20240729145149955.png)
+
+
+
+#### GAIL的生成器与判别器
+
+- 训练数据
+
+  - 被模仿的对象（比如人类专家）操作智能体得到的轨迹
+
+    ![image-20240729145946735](./RL_note.assets/image-20240729145946735.png)
+
+  - k 条轨迹
+
+    ![image-20240729150005239](./RL_note.assets/image-20240729150005239.png)
+
+- 策略生成器 $\pi(a|s; \boldsymbol{\theta})$ 
+
+  ![image-20240729151324053](./RL_note.assets/image-20240729151324053.png)
+
+  - 输入是状态 s
+
+  - 输出是一个向量 $\boldsymbol{f} = \pi(\cdot | s;\boldsymbol{\theta})$
+
+    - 维度是动作空间的大小 A
+    - 每个元素对应一个动作，表示执行该动作 的概率
+
+  - 给定初始状态 s1，并让智能体与环境交互，可以得到一条轨迹
+
+    ![image-20240729151100139](./RL_note.assets/image-20240729151100139.png)
+
+  - 其中动作是根据策略网络抽样得到的
+
+    ![image-20240729151121865](./RL_note.assets/image-20240729151121865.png)
+
+  - 下一时刻的状态是环境根据状态转移函数计算出来的
+
+    ![image-20240729151200783](./RL_note.assets/image-20240729151200783.png)
+
+  - 训练生成器
+
+    - 用策略网络 $\pi(a|s; \boldsymbol{\theta}_\text{now})$  控制智能体与环境交互，得到一条轨迹
+
+      ![image-20240729151827264](./RL_note.assets/image-20240729151827264.png)
+
+    - 通过判别器判断 $(s_t, a_t)$ 的真实度，$D(s_t , a_t ; \boldsymbol{\phi})$ 越大，在判别器眼中越真实
+
+    - 根据判别器获得回报
+
+      ![image-20240729152025093](./RL_note.assets/image-20240729152025093.png)
+
+      ![image-20240729152049065](./RL_note.assets/image-20240729152049065.png)
+
+    - 通过TRPO更新策略网络 （置信域策略优化）
+
+      - 目标函数
+
+        ![image-20240729153120980](./RL_note.assets/image-20240729153120980.png)
+
+      - 求解带约束的最大化问题，更新参数
+
+        ![image-20240729153141943](./RL_note.assets/image-20240729153141943.png)
+
+      
+
+- 策略判别器 $D(s, a; \boldsymbol{\phi})$
+
+  ![image-20240729151646342](./RL_note.assets/image-20240729151646342.png)
+
+  - 输入 是状态 s
+
+  - 输出是一个向量 $\hat{p} = D(s, \cdot|\boldsymbol{\phi})$
+
+    - 输出向量 $\hat{p}$ 的维度是动作空间的大小 A
+
+    - 每个元素对应一个动作 a
+
+      ![image-20240729151536537](./RL_note.assets/image-20240729151536537.png)
+
+    - $\hat{p}_a$ 接近 1 表示 (s, a) 为“真”，即动作 a 是人类专家做的。
+    - $\hat{p}_a$ 接近 0 表示 (s, a) 为“假”，即 策略网络生成的。
+
+  - 训练判别器
+
+    - 训练数据中均匀抽样一条轨迹
+
+      ![image-20240729153309347](./RL_note.assets/image-20240729153309347.png)
+
+    - 策略网络控制智能体与环境交互，得到一条轨迹
+
+      ![image-20240729153329351](./RL_note.assets/image-20240729153329351.png)
+
+    - 鼓励判别器做出准确的判断
+
+      - $D(s_t^{\text{real}}, a_t^{\text{real}};\boldsymbol{\phi})$  尽量大
+
+      - $D(s_t^{\text{fake}}, a_t^{\text{fake}};\boldsymbol{\phi})$  尽量小
+
+      - 损失函数
+
+        ![image-20240729153615480](./RL_note.assets/image-20240729153615480.png)
+
+      - 梯度下降更新参数 $\boldsymbol{\theta}$
+
+        ![image-20240729153929649](./RL_note.assets/image-20240729153929649.png)
+
+  - 判别器训练流程
+
+    ![image-20240729153959195](./RL_note.assets/image-20240729153959195.png)
+
+    ![image-20240729154012722](./RL_note.assets/image-20240729154012722.png)
