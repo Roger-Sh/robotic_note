@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(ArmNavigation)
+
+add_subdirectory(TwoJointArmToPointControl)
+add_subdirectory(NJointArmToPointControl)
+add_subdirectory(NLinkArm3d)
+add_subdirectory(ArmObstacleNavigation)
+add_subdirectory(RRTStarSevenJointArmControl)
