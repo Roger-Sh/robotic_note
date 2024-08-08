@@ -2037,7 +2037,7 @@ PROBOT Anno 控制系统
 
 
 
-## ROS 进程间通信
+## ROS 进程间通信的机制
 
 - [ROS机器人操作系统底层原理及代码剖析](https://mp.weixin.qq.com/s?__biz=MzU1NjEwMTY0Mw==&mid=2247574459&idx=1&sn=aa04000ab27de3443b4957448c1f1542&chksm=fbc9dadfccbe53c9b8224e7df85504beb5868b27ca226ea7dadbea27c9b32be31856f213fbfa&scene=27)
 
